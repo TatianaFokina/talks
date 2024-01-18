@@ -1,4 +1,8 @@
-# Презентации к моим докладам
+# Презентации к докладам
+
+## 2024
+
+[Doka for each other](doka-for-each-other/), Tbilisi JS #1.
 
 ## 2022
 

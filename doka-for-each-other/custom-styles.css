@@ -70,6 +70,10 @@
     color: var(--color-light-grey);
 }
 
+.slide li:before {
+    color: var(--color-light-grey);
+}
+
 .slide a {
     color: var(--color-white);
 }

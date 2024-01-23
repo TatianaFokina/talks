@@ -33,7 +33,7 @@
 
 .shower {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 23px;
+    font-size: 26px;
     line-height: 1.5;
     font-weight: 300;
 }
@@ -70,6 +70,16 @@
     color: var(--color-light-grey);
 }
 
+.slide figcaption {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.slide mark {
+    background-color: #FFD829;
+    font-size: 28px;
+}
+
 .slide li:before {
     color: var(--color-light-grey);
 }
@@ -94,7 +104,11 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 32px;
+    font-size: 38px;
+}
+
+.slide.shout mark {
+    font-size: 41px;
 }
 
 .progress:before {

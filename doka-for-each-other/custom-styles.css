@@ -2,6 +2,7 @@
     --color-white: #ffffff;
     --color-light-grey: #dddddd;
     --color-dark-grey: #282a2e;
+    --color-accent: #FFD829;
 }
 
 @font-face {
@@ -76,7 +77,7 @@
 }
 
 .slide mark {
-    background-color: #FFD829;
+    background-color: var(--color-accent);
     font-size: 28px;
 }
 
@@ -85,7 +86,7 @@
 }
 
 .slide a {
-    color: var(--color-white);
+    color: var(--color-accent);
 }
 
 .slide a:hover {

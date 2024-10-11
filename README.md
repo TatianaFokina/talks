@@ -2,7 +2,8 @@
 
 ## 2024
 
-[Doka for each other](doka-for-each-other/), Tbilisi JS #1.
+- [Accessibility-n-Typography](a11y-and-typography/), _meetup-name#1_.
+- [Doka for each other](doka-for-each-other/), Tbilisi JS #1.
 
 ## 2022
 

@@ -1,0 +1,130 @@
+:root {
+  --accent--color: #e0c974;
+  --background-color: #b6a1d9;
+  --text-color: #2b2b2b;
+  --links-color: #4e3677;
+  --interaction-color: #cebee8;
+  --headings-color: #282a2e;
+  --decorative--color: #3c3c3c;
+  --shower-elems-color: #e1ceff;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-v8-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("fonts/ibm-plex-sans-v8-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("fonts/ibm-plex-sans-v8-latin_cyrillic-700.woff2") format("woff2"),
+    url("fonts/ibm-plex-sans-v8-latin_cyrillic-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("fonts/ibm-plex-mono-v6-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("fonts/ibm-plex-mono-v6-latin_cyrillic-regular.woff") format("woff");
+}
+
+.shower {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.slide {
+  background-color: var(--background-color);
+}
+
+.slide:after {
+  height: calc(var(--ribbon-size) * 1.6);
+  background-image: none;
+  background-color: var(--shower-elems-color);
+  color: var(--focus-color);
+}
+
+.caption h1,
+.slide h2,
+.slide h3,
+.slide p {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.slide h2,
+.slide h3 {
+  margin-bottom: 40px;
+  color: var(--headings-color);
+}
+
+.slide li:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.slide figcaption {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.slide mark {
+  background-color: var(--accent--color);
+  font-size: 28px;
+}
+
+.slide li:before {
+  color: var(--decorative--color);
+}
+
+.slide a {
+  color: var(--links-color);
+}
+
+.slide a:hover {
+  background-color: var(--interaction-color);
+}
+
+.slide.shout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 75px var(--slide-side);
+}
+
+.slide.shout p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 38px;
+}
+
+.slide.shout mark {
+  font-size: 41px;
+}
+
+.progress:before {
+  background-color: var(--shower-elems-color);
+}
+
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

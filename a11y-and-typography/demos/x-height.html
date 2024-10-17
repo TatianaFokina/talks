@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>X-height</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        color-scheme: dark;
+      }
+
+      body {
+        min-height: 100vh;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        color: #bdabb6;
+        background: rgb(46 48 48);
+      }
+
+      .container {
+        display: flex;
+        align-content: baseline;
+        gap: 40px;
+      }
+
+      .font {
+        width: 50%;
+      }
+
+      .font__name {
+        font-size: 18px;
+        margin: 0 0 15px;
+      }
+
+      .font__example {
+        font-size: 16px;
+        color: #e8d0de;
+      }
+
+      .font__example--first {
+        font-family: "Times New Roman", serif;
+      }
+
+      .font__example--second {
+        font-family: "Verdana", sans-serif;
+      }
+
+      .font__characteristics {
+        display: flex;
+        margin-bottom: 18px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid rgb(69 73 72);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="font">
+        <h2 class="font__name">Times New Roman</h2>
+        <div class="font__characteristics">
+          Font-size = 16 pixels; visual arc = 0.25° ☹️
+        </div>
+        <p class="font__example font__example--first">
+          Chemical Decomposition is the breakdown of a single particle or entity
+          (such as a molecule or reactive intermediate) into two or more
+          fragments. Contrast chemical synthesis.
+        </p>
+      </div>
+      <div class="font">
+        <h2 class="font__name">Verdana</h2>
+        <div class="font__characteristics">
+          Font size = 16 pixels; visual arc = 0.30° 🙂
+        </div>
+        <p class="font__example font__example--second">
+          Chemical Decomposition is the breakdown of a single particle or entity
+          (such as a molecule or reactive intermediate) into two or more
+          fragments. Contrast chemical synthesis.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

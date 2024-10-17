@@ -1,12 +1,12 @@
 :root {
   --accent--color: #e0c974;
-  --background-color: #b6a1d9;
-  --text-color: #2b2b2b;
-  --links-color: #4e3677;
+  --background-color: rgb(69 73 72);
+  --text-color: #e8d0de;
+  --links-color: #dec0d1;
   --interaction-color: #cebee8;
-  --headings-color: #282a2e;
-  --decorative--color: #3c3c3c;
-  --shower-elems-color: #e1ceff;
+  --headings-color: #bdabb6;
+  --decorative--color: #dec0d1;
+  --shower-elems-color: rgb(47 50 49);
 }
 
 @font-face {
@@ -38,6 +38,10 @@
     url("fonts/ibm-plex-mono-v6-latin_cyrillic-regular.woff") format("woff");
 }
 
+html {
+  color-scheme: dark;
+}
+
 .shower {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 26px;
@@ -47,6 +51,7 @@
 }
 
 .slide {
+  padding-top: 46px;
   background-color: var(--background-color);
 }
 
@@ -79,9 +84,29 @@
   line-height: 1.4;
 }
 
+.slide img {
+  display: inline-block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.filtered-img {
+  filter: brightness(87%) saturate(0%);
+  -webkit-filter: brightness(87%) saturate(0%);
+  -moz-filter: brightness(87%) saturate(0%);
+}
+
 .slide mark {
   background-color: var(--accent--color);
   font-size: 28px;
+}
+
+.slide iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
 }
 
 .slide li:before {

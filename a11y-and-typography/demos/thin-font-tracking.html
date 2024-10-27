@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>X-height</title>
+    <title>Thin font with positive tracking</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family==Xanh+Mono&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -52,16 +52,18 @@
       }
 
       .font__example {
-        font-size: 16px;
+        font-family: "Xanh Mono", monospace;
+        font-size: 18px;
+        font-weight: 400;
         color: #e8d0de;
       }
 
       .font__example--first {
-        font-family: "Times New Roman", serif;
+        letter-spacing: normal;
       }
 
       .font__example--second {
-        font-family: "Verdana", sans-serif;
+        letter-spacing: 1px;
       }
 
       .font__characteristics {
@@ -75,25 +77,25 @@
   <body>
     <div class="container">
       <div class="font">
-        <h2 class="font__name">Times New Roman</h2>
+        <h2 class="font__name">Xanh Mono</h2>
         <div class="font__characteristics">
-          <p>Font-size = 16 pixels; visual arc = 0.25° ☹️</p>
+          <p><code>letter-spacing: normal</code> ☹️</p>
         </div>
         <p class="font__example font__example--first">
-          Chemical Decomposition is the breakdown of a single particle or entity
-          (such as a molecule or reactive intermediate) into two or more
-          fragments. Contrast chemical synthesis.
+          Scirpus are rhizomatous perennial herbs, with 3-angled stems and flat
+          grass-like leaves. The flowers are in clusters of small spikelets,
+          often brown or greenish brown.
         </p>
       </div>
       <div class="font">
-        <h2 class="font__name">Verdana</h2>
+        <h2 class="font__name">Xanh Mono again</h2>
         <div class="font__characteristics">
-          <p>Font size = 16 pixels; visual arc = 0.30° 🙂</p>
+          <p><code>letter-spacing: 1px</code> 🙂</p>
         </div>
         <p class="font__example font__example--second">
-          Chemical Decomposition is the breakdown of a single particle or entity
-          (such as a molecule or reactive intermediate) into two or more
-          fragments. Contrast chemical synthesis.
+          Scirpus are rhizomatous perennial herbs, with 3-angled stems and flat
+          grass-like leaves. The flowers are in clusters of small spikelets,
+          often brown or greenish brown.
         </p>
       </div>
     </div>

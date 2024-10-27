@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Small and big font sizes</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			*,
+			*::before,
+			*::after {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html {
+				color-scheme: dark;
+			}
+
+			body {
+				min-height: 100vh;
+				padding: 30px;
+				display: flex;
+				justify-content: center;
+				font-family: "IBM Plex Sans", sans-serif;
+				font-size: 15px;
+				font-weight: 400;
+				font-style: normal;
+				color: #bdabb6;
+				background: rgb(46 48 48);
+			}
+
+			.container {
+				display: flex;
+				align-content: baseline;
+				gap: 40px;
+			}
+
+			.font {
+				width: 50%;
+			}
+
+			.font__name {
+				font-size: 28px;
+				margin: 0 0 15px;
+			}
+
+			.font__example {
+				font-family: "Montserrat", sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				color: #e8d0de;
+			}
+
+			.font__example--first {
+				font-size: 10px;
+			}
+
+			.font__example--second {
+				font-size: 18px;
+			}
+
+			.font__characteristics {
+				display: flex;
+				margin-bottom: 18px;
+				padding-bottom: 8px;
+				border-bottom: 2px solid rgb(69 73 72);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="font">
+				<h2 class="font__name">Montserrat</h2>
+				<div class="font__characteristics">
+					<p><code>font-size: 10px</code> ☹️</p>
+				</div>
+				<p class="font__example font__example--first">
+					Short tandem repeat (STR) analysis is the primary type of forensic DNA
+					analysis performed in modern DNA laboratories. STR analysis builds
+					upon RFLP and AmpFLP used in the past by shrinking the size of the
+					repeat units.
+				</p>
+			</div>
+			<div class="font">
+				<h2 class="font__name">Montserrat again</h2>
+				<div class="font__characteristics">
+					<p><code>font-size: 18px</code> 🙂</p>
+				</div>
+				<p class="font__example font__example--second">
+					Short tandem repeat (STR) analysis is the primary type of forensic DNA
+					analysis performed in modern DNA laboratories. STR analysis builds
+					upon RFLP and AmpFLP used in the past by shrinking the size of the
+					repeat units.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

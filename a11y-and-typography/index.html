@@ -1,278 +1,658 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>Accessibility and typography</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
-    <link rel="stylesheet" href="custom-styles.css" />
-    <style>
-      .shower {
-        --slide-ratio: calc(16 / 9);
-      }
-    </style>
-  </head>
-  <body class="shower list">
-    <header class="caption">
-      <h1>Accessibility and Typography</h1>
-      <p>Tatiana Fokina, [meetup] #1, November 2, 2024.</p>
-    </header>
+	<head>
+		<title>Accessibility and typography</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover"
+		/>
+		<link
+			rel="stylesheet"
+			href="shower/themes/ribbon/styles/styles.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="custom-styles.css"
+		/>
+		<style>
+			.shower {
+				--slide-ratio: calc(16 / 9);
+			}
+		</style>
+	</head>
+	<body class="shower list">
+		<header class="caption">
+			<h1>Accessibility and Typography</h1>
+			<p>Tatiana Fokina, [meetup] #1, November 2, 2024.</p>
+		</header>
 
-    <section class="slide title" id="cover">
-      <h2 class="vh">Accessibility and typography</h2>
-      <img
-        class="cover width height"
-        src="pictures/cover.png"
-        alt="Here I'll add a cool picture (maybe)"
-      />
+		<section
+			class="slide title"
+			id="cover"
+		>
+			<h2 class="vh">Accessibility and typography</h2>
+			<img
+				class="cover width height"
+				src="pictures/cover.png"
+				alt="Here I'll add a cool picture (maybe)"
+			/>
 
-      <style>
-        #cover::after {
-          visibility: hidden;
-        }
-      </style>
-    </section>
+			<style>
+				#cover::after {
+					visibility: hidden;
+				}
+			</style>
+		</section>
 
-    <section class="slide">
-      <h2>Who is talking?</h2>
-      <ul>
-        <li>Developer with a passion for web accessibility</li>
-        <li>Google's Women Techmakers Ambassador</li>
-        <li>
-          Co-host for the podcast
-          <a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a>
-          🍍
-        </li>
-        <li>Editor of the Accessibility at Doka Guide</li>
-        <li>
-          Spontaneous author of
-          <a href="https://tatiana-fokina-blog.ru"
-            >blog on digital accessibility</a
-          >
-        </li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>Who is talking?</h2>
+			<ul>
+				<li>Developer with a passion for web accessibility</li>
+				<li>Google's Women Techmakers Ambassador</li>
+				<li>
+					Co-host for the podcast
+					<a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a>
+					🍍
+				</li>
+				<li>Editor of the Accessibility at Doka Guide</li>
+				<li>
+					Spontaneous author of
+					<a href="https://tatiana-fokina-blog.ru"
+						>blog on digital accessibility</a
+					>
+				</li>
+			</ul>
+		</section>
 
-    <section class="slide shout">
-      <h2 class="vh">Typography?</h2>
-      <p>🚧</p>
-    </section>
+		<section class="slide shout">
+			<h2 class="vh">What is typography?</h2>
+			<p>
+				Typography is the way how the texts are
+				<mark>arranged and visually appealing</mark>.
+			</p>
+		</section>
 
-    <section class="slide">
-      <h2>Benefits of typography</h2>
-      <ul>
-        <li>Increase accessibility and usability of your interface</li>
-        <li>Improve product and brand appearance</li>
-        <li>Create a consistent brand identity.</li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>Benefits of typography</h2>
+			<ul>
+				<li>Increase accessibility and usability of your interfaces</li>
+				<li>Set the right mood or tone</li>
+				<li>Improve product and brand appearance</li>
+				<li>Create a consistent brand identity.</li>
+			</ul>
+			<img
+				src="pictures/benefits.png"
+				height="200px"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>Accessibility and usability</h2>
-      <p><mark>Accessibility</mark> — …</p>
-      <p><mark>Usability</mark> — …</p>
-    </section>
+		<section class="slide">
+			<h2>Accessibility and usability</h2>
+			<p>
+				<b>Usability</b> is a measure of how effective, efficient, and
+				satisfying interfaces are.
+			</p>
+			<p>
+				<b>Accessibility (a11y)</b> focuses on the possibility to use interfaces
+				for people with disabilities first of all.
+			</p>
+			<img
+				src="pictures/grab-the-table.png"
+				height="200px"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide shout">
-      <p>
-        Accessibility in typography is about <mark>visual&nbsp;clarity</mark>
-      </p>
-    </section>
+		<section class="slide shout">
+			<p>
+				Accessibility in typography is about
+				<mark>visual&nbsp;clarity</mark>
+			</p>
+		</section>
 
-    <section class="slide">
-      <h2>Visual clarity</h2>
-      <p>
-        How easy to see and understand in design, clearly showing information.
-      </p>
-      <img
-        height="300px"
-        src="pictures/tiny-paper.png"
-        alt=""
-        class="filtered-img"
-      />
-    </section>
+		<section class="slide">
+			<h2>Visual clarity</h2>
+			<p>
+				How easy to see and understand in design, clearly showing information.
+			</p>
+			<img
+				src="pictures/tiny-paper.png"
+				height="280px"
+				class="filtered-img"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>How to measure clarity?</h2>
-      <p>
-        User-friendly typography based on two turtles — legibility and
-        readability.
-      </p>
-      <ul>
-        <li>
-          <b>Readability</b> refers to how easy it is to read texts overall
-        </li>
-        <li>
-          <b>Legibility</b> refers to how easy to see, distinguish, and
-          recognize the characters and words.
-        </li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>How to measure clarity?</h2>
+			<p>
+				User-friendly typography based on two turtles — legibility and
+				readability.
+			</p>
+			<img
+				src="pictures/turtles.png"
+				height="280px"
+				class="filtered-img"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>Legibility components [1]</h2>
-      <ul>
-        <li class="next">Familiarity</li>
-        <li class="next">X-height</li>
-        <li class="next">Character width</li>
-        <li class="next">Letter spacing.</li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>Readability and legibility</h2>
+			<p><b>Readability</b> refers to how easy it is to read texts overall</p>
+			<p>
+				<b>Legibility</b> refers to how easy to see, distinguish, and recognize
+				the characters and words.
+			</p>
+		</section>
 
-    <section class="slide">
-      <h2>Legibility components [2]</h2>
-      <ul>
-        <li class="next">
-          <b>Open counters</b> is the enclosed or partially enclosed spaces
-          within letters
-        </li>
-        <li class="next">
-          <b>Stroke contrast</b> is differences between thick and thin strokes.
-        </li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>Legibility components [1]</h2>
+			<ul>
+				<li class="next">Typeface.</li>
+				<li class="next">X-height.</li>
+				<li class="next">Counter.</li>
+				<li class="next">Letter spacing…</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>Familiarity</h2>
-      <p>
-        letters that look like what we're used to seeing… familiar letter shapes
-      </p>
-    </section>
+		<section class="slide">
+			<h2>Legibility components [2]</h2>
+			<ul>
+				<li class="next">Distinct letterforms.</li>
+				<li class="next">Font size.</li>
+				<li class="next">Font weight.</li>
+				<li class="next">Line height.</li>
+				<li class="next">Contrast and color.</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>X-height</h2>
-      <p>The height of lowercase letters in proportion to capital letters.</p>
-      <img width="100%" src="pictures/x-height.png" alt="" />
-    </section>
+		<section class="slide">
+			<h2>Legibility components [3]</h2>
+			<ul>
+				<li class="next">
+					<b>Familiarity</b> is the measure how much letter shapes is familiar
+				</li>
+				<li>
+					<b>Character width</b> is the overall width of every font characters.
+				</li>
+				<li class="next">
+					<b>Stroke contrast</b> is differences between thick and thin strokes.
+				</li>
+			</ul>
+		</section>
 
-    <section class="slide shout">
-      <p>
-        The optimal x-height for fonts is around
-        <mark>0.3&nbsp;degree&nbsp;of&nbsp;visual&nbsp;arc</mark> (a measuring
-        of how much of field of view an object takes up).
-      </p>
-    </section>
+		<section class="slide">
+			<h2>Typeface and font</h2>
+			<ul>
+				<li>
+					<b>Typeface</b> is a family of related designs for text characters
+					(letters, numbers, and symbols)
+				</li>
+				<li>
+					<b>Font</b> is a specific version of a typeface with particular
+					characteristics including weight (bold or regular), style (italic or
+					normal), and size.
+				</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>X-height on practice</h2>
-      <iframe
-        title="Fonts x-height"
-        src="demos/x-height.html"
-        loading="lazy"
-        height="300"
-      ></iframe>
-    </section>
+		<section class="slide">
+			<h2>Typeface vs. font</h2>
+			<img
+				src="pictures/typeface-and-font.png"
+				height="400px"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>Character width</h2>
-      <p>overall width of every font characters.</p>
-    </section>
+		<section class="slide">
+			<h2>Basic clear typefaces</h2>
+			<ul>
+				<li>Arial,</li>
+				<li>Calibri,</li>
+				<li>Poppins,</li>
+				<li>Tahoma,</li>
+				<li>Verdana.</li>
+			</ul>
+			<img
+				src="pictures/default-typefaces.png"
+				height="150px"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>Letter spacing</h2>
-      <p>the space between the widest points of each character</p>
-    </section>
+		<section class="slide">
+			<h2>Special clear typefaces</h2>
+			<p>
+				<b>Lexend</b> and <b>Atkinson Hyperlegible</b> were created with
+				specific designs that are intended to <mark>be easier to read</mark>.
+			</p>
+			<img
+				src="pictures/special-typefaces.png"
+				height="290px"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>Readability components [1]</h2>
-      <ul>
-        <li class="next">Typeface</li>
-        <li class="next">Font size</li>
-        <li class="next">Font weight</li>
-        <li class="next">Spacing and layout</li>
-        <li class="next">Contrast and color.</li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>Dyslexia</h2>
+			<p>
+				This is a learning disability that affects
+				<mark>reading or writing skills</mark>. Unlike other learning
+				disabilities, intelligence isn't affected.
+			</p>
+			<img
+				src="pictures/dyslexia-meme.png"
+				height="290px"
+				class="filtered-img"
+				alt=""
+			/>
+		</section>
 
-    <section class="slide">
-      <h2>Readability components [2]</h2>
-      <p>
-        <b>Consistency and hierarchy</b> — consistent fonts and styles for
-        headings, body text.
-      </p>
-    </section>
+		<section class="slide shout">
+			<p>
+				About <mark>10%</mark> of the world's adults, or
+				<mark>750&nbsp;million&nbsp;people</mark>, cannot read or write.
+				Dyslexia is a factor in 70% to 80% of these cases.
+			</p>
+		</section>
 
-    <section class="slide">
-      <h2>Typeface</h2>
-      <p>
-        a family of letters and characters that are designed to be presented
-        together to form words and numbers
-      </p>
-    </section>
+		<section class="slide">
+			<h2>Main symptoms of dyslexia</h2>
+			<ul>
+				<li>Read slowly.</li>
+				<li>Find it hard to scan or skim text.</li>
+				<li>
+					Confuse visually similar word like “cat” and “cot,” «голова» и
+					«глава».
+				</li>
+				<li>Problems with spelling.</li>
+				<li>Find it hard to listen and maintain focus.</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>Font size</h2>
-      <p>🚧</p>
-    </section>
+		<section class="slide">
+			<h2>Dyslexia simulation</h2>
+			<figure>
+				<img
+					src="pictures/types-of-dyslexia.png"
+					height="350px"
+					alt=""
+				/>
+				<figcaption>
+					<a href="https://youtu.be/RDFkwkSgjtg">Dyslexia Improvements</a>
+				</figcaption>
+			</figure>
+		</section>
 
-    <section class="slide">
-      <h2>Font weight</h2>
-      <p>the thickness of the lines in each letter.</p>
-    </section>
+		<section class="slide shout">
+			<p>
+				Dyslexia can appear differently and be more or less common depending on
+				the language rules and the writing system.
+			</p>
+		</section>
 
-    <section class="slide">
-      <h2>Spacing and layout</h2>
-      <p>letter spacing (tracking), line spacing (leading), line length</p>
-    </section>
+		<section class="slide">
+			<h2>Language rules</h2>
+			<p>
+				The complexity of language depends on its spelling, grammar, and
+				pronunciation.
+			</p>
+			<ul>
+				<li><b>Easier languages</b>: Italian, German, etc.</li>
+				<li><b>Harder languages</b>: English, French, Russian, etc.</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>Contrast and color</h2>
-      <p>the difference between text and background.</p>
-    </section>
+		<section class="slide">
+			<h2>Writing system</h2>
+			<p>Dyslexia can be affected by the type of writing system.</p>
+			<ul>
+				<li>
+					<b>Albhabetic languages</b> lead to trouble connecting sounds to
+					letters. Examples: English, Hiragana, Hangul.
+				</li>
+				<li>
+					<b>Logographic languages</b> involve problems with visual processing,
+					sound recognition, and memorizing characters. Examples: Chinese,
+					Kanji, Hanja.
+				</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>Typography checklist</h2>
-      <ul>
-        <li class="next">🚧</li>
-        <li class="next">🚧</li>
-      </ul>
-    </section>
+		<section class="slide">
+			<h2>Dyslexia-friendly typeface rules</h2>
+			<ul>
+				<li>Plain and easy to read.</li>
+				<li>Light or regular font weight.</li>
+				<li>Lowercase letters.</li>
+				<li>Distinct and wide letterforms.</li>
+				<li>Moderately spaced characters.</li>
+			</ul>
+		</section>
 
-    <section class="slide">
-      <h2>Links</h2>
-      <div class="columns three" id="pictures">
-        <figure>
-          <img
-            src="pictures/doka-qr.png"
-            alt="Doka web site QR"
-            width="200px"
-            height="auto"
-          />
-          <figcaption>
-            <a href="https://doka.guide/">Doka</a>
-          </figcaption>
-        </figure>
-        <figure>
-          <img
-            src="pictures/gh-qr.png"
-            alt="Doka GitHub QR"
-            width="200px"
-            height="auto"
-          />
-          <figcaption>
-            <a href="https://github.com/doka-guide">GitHub</a>
-          </figcaption>
-        </figure>
-        <figure>
-          <img src="" alt="Presentation QR" width="200px" height="auto" />
-          <figcaption>
-            <a href="https://github.com/doka-guide/content/tree/main/docs"
-              >Presentation</a
-            >
-          </figcaption>
-        </figure>
-      </div>
-    </section>
+		<section class="slide">
+			<h2>Dyslexia-friendly typefaces [1]</h2>
+			<p>All clear typefaces plus:</p>
+			<ul>
+				<li>Comic Sans,</li>
+				<li>Omotype,</li>
+				<li>OpenDyslexic,</li>
+				<li>Open Sans,</li>
+				<li>Read Regular…</li>
+			</ul>
+		</section>
 
-    <footer class="badge">
-      <a href="https://github.com/shower/shower">Made in Shower</a>
-    </footer>
+		<section class="slide">
+			<h2>Dyslexia-friendly typefaces [2]</h2>
+			<ul>
+				<li>Roboto,</li>
+				<li>Times New Roman 😨,</li>
+				<li>Tiresias.</li>
+			</ul>
+		</section>
 
-    <div class="progress"></div>
+		<section class="slide">
+			<h2>X-height</h2>
+			<p>Height of lowercase letters in proportion to capital letters.</p>
+			<img
+				src="pictures/x-height.png"
+				height="330px"
+				alt=""
+			/>
+		</section>
 
-    <script src="shower/shower.js"></script>
-  </body>
+		<section class="slide shout">
+			<p>
+				The optimal x-height for fonts is around
+				<mark>0.3&nbsp;degree&nbsp;of&nbsp;visual&nbsp;arc</mark> (a measuring
+				of how much of field of view an object takes up.)
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>X-height on practice</h2>
+			<iframe
+				title="Font x-height"
+				src="demos/x-height.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Counter</h2>
+			<p>Partially or fully enclosed space within a letter or symbol.</p>
+			<img
+				src="pictures/counters.png"
+				height="320px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Open and closed counters</h2>
+			<ul>
+				<li class="next">
+					<b>Closed counters</b> is completely enclosed spaces within letters.
+				</li>
+				<li class="next">
+					<b>Open counters</b> have an opening aperture that connects to the
+					outside of the letters.
+				</li>
+			</ul>
+			<img
+				class="next"
+				src="pictures/open-closed-counters.png"
+				height="230px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<mark>Clear spacing (open counter)</mark> between letters helps make
+				similar-looking letters (“c,” “e,” etc.) easier to tell apart.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Counters on practice (lathin)</h2>
+			<iframe
+				title="Fonts with closed and open counters"
+				src="demos/counters-lathin.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Counters on practice (cyrillic)</h2>
+			<iframe
+				title="Fonts with closed and open counters"
+				src="demos/counters-cyrillic.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Letter spacing (or tracking)</h2>
+			<p>
+				Horizontal spacing between all letters in a word or section of text.
+			</p>
+			<img
+				src="pictures/letter-spacing.png"
+				height="330px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				More space between a letters helps with the readability of
+				<mark>all-caps&nbsp;text</mark> or
+				an&nbsp;<mark>extremely&nbsp;thin&nbsp;font</mark>.
+			</p>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Less letters space is legit only for a
+				<mark>very&nbsp;large&nbsp;font</mark>.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Letter spacing on practice</h2>
+			<iframe
+				title="Font letter spacing"
+				src="demos/letter-spacing.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Appropriate letter spacing</h2>
+			<iframe
+				title="Thin font with more letter spacing"
+				src="demos/thin-font-tracking.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Users preferences</h2>
+			<p>
+				Users can adjust text spacing via plagins to make it easier to read
+				because of their:
+			</p>
+			<ul>
+				<li>Dyslexia</li>
+				<li>Visual impairments</li>
+				<li>Other personal preferences.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Support user-defined settings</h2>
+			<p>
+				Set these text style properties and ensure there is
+				<mark>no loss of content or functionality</mark>:
+			</p>
+			<ul>
+				<li>Letter spacing to at least 0.12 times the font size</li>
+				<li>Word spacing to at least 0.16 times the font size</li>
+				<li>Line height to at least 1.5 times the font size</li>
+				<li>Spacing following paragraphs to at least 2 times the font size.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Good example</h2>
+			<img
+				src="pictures/reddit-letter-spacing.png"
+				height="400px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>It's no good</h2>
+			<img
+				src="pictures/ym-letter-spacing.png"
+				height="400px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Distinct letterforms</h2>
+			<p>🚧</p>
+		</section>
+
+		<section class="slide">
+			<h2>Font size</h2>
+			<p>
+				Number of a typeface that measures the size of letters and other
+				characters on a screen.
+			</p>
+			<img
+				src="pictures/font-size.png"
+				height="280px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Minimum font size is
+				<mark>16&nbsp;pixels&nbsp;(12&nbsp;points)</mark> and bigger for desktop
+				intarfaces and not below
+				<mark>12&nbsp;pixels&nbsp;(9&nbsp;points)</mark> for mobile interfaces.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Font size on practice</h2>
+			<iframe
+				title="Small and big font sizes"
+				src="demos/font-size.html"
+				loading="lazy"
+				height="380px"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Font weight</h2>
+			<p>Thickness of the lines in each letter.</p>
+		</section>
+
+		<section class="slide">
+			<h2>Line height</h2>
+			<p>🚧</p>
+		</section>
+
+		<section class="slide">
+			<h2>Contrast and color</h2>
+			<p>the difference between text and background.</p>
+		</section>
+
+		<section class="slide">
+			<h2>Readability components</h2>
+			<ul>
+				<li>Legibility.</li>
+				<li>Level of complexity of the text and its familiarity.</li>
+				<li>
+					<b>Consistency and hierarchy</b> — consistent fonts and styles for
+					headings, body text.
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Typography checklist</h2>
+			<ul>
+				<li class="next">🚧</li>
+				<li class="next">🚧</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Links</h2>
+			<div
+				class="columns three"
+				id="pictures"
+			>
+				<figure>
+					<img
+						src="pictures/doka-qr.png"
+						alt="Doka web site QR"
+						width="200px"
+						height="auto"
+					/>
+					<figcaption>
+						<a href="https://doka.guide/">Doka</a>
+					</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="pictures/gh-qr.png"
+						alt="Doka GitHub QR"
+						width="200px"
+						height="auto"
+					/>
+					<figcaption>
+						<a href="https://github.com/doka-guide">GitHub</a>
+					</figcaption>
+				</figure>
+				<figure>
+					<img
+						src=""
+						alt="Presentation QR"
+						width="200px"
+						height="auto"
+					/>
+					<figcaption>
+						<a href="https://github.com/doka-guide/content/tree/main/docs"
+							>Presentation</a
+						>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<footer class="badge">
+			<a href="https://github.com/shower/shower">Made in Shower</a>
+		</footer>
+
+		<div class="progress"></div>
+
+		<script src="shower/shower.js"></script>
+	</body>
 </html>

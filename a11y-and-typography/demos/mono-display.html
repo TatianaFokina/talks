@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Fonts with closed and open counters</title>
+		<title>Display and monospaced typefaces</title>
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -17,7 +17,7 @@
 			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Mohave:wght@400&family=Titillium+Web:wght@400&display=swap"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Kablammo&family=IBM+Plex+Mono&display=swap"
 			rel="stylesheet"
 		/>
 		<style>
@@ -49,11 +49,7 @@
 			.container {
 				display: flex;
 				align-content: baseline;
-				gap: 40px;
-			}
-
-			.font {
-				width: 50%;
+				gap: 60px;
 			}
 
 			.font__name {
@@ -62,19 +58,19 @@
 			}
 
 			.font__example {
-				font-size: 18px;
+				font-size: 20px;
 				font-style: normal;
-				font-weight: 400;
 				color: #e8d0de;
 			}
 
 			.font__example--first {
-				font-family: "Mohave", sans-serif;
-				font-optical-sizing: auto;
+				font-family: "IBM Plex Mono", monospace;
+				font-weight: 200;
 			}
 
 			.font__example--second {
-				font-family: "Titillium Web", sans-serif;
+				font-family: "Kablammo", system-ui;
+				font-weight: 400;
 			}
 
 			.font__characteristics {
@@ -88,26 +84,18 @@
 	<body>
 		<div class="container">
 			<div class="font">
-				<h2 class="font__name">Mohave</h2>
+				<h2 class="font__name">IBM Plex Mono</h2>
 				<div class="font__characteristics">
-					<p>Closed counters ☹️</p>
+					<p>Monospaced typeface.</p>
 				</div>
-				<p class="font__example font__example--first">
-					Comorbidity refers to the simultaneous presence of two or more medical
-					conditions in a patient; often co-occurring (that is, concomitant or
-					concurrent) with a primary condition.
-				</p>
+				<p class="font__example font__example--first">Grammatical category.</p>
 			</div>
 			<div class="font">
-				<h2 class="font__name">Titillium Web</h2>
+				<h2 class="font__name">Kablammo</h2>
 				<div class="font__characteristics">
-					<p>Open counters 🙂</p>
+					<p>Display typeface.</p>
 				</div>
-				<p class="font__example font__example--second">
-					Comorbidity refers to the simultaneous presence of two or more medical
-					conditions in a patient; often co-occurring (that is, concomitant or
-					concurrent) with a primary condition.
-				</p>
+				<p class="font__example font__example--second">Grammatical category.</p>
 			</div>
 		</div>
 	</body>

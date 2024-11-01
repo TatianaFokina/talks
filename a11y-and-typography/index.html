@@ -24,20 +24,19 @@
 	<body class="shower list">
 		<header class="caption">
 			<h1>Accessibility and Typography</h1>
-			<p>Tatiana Fokina, [meetup] #1, November 2, 2024.</p>
+			<p>Tanya Fokina, Tbilisi A11y & UX Day.</p>
 		</header>
 
 		<section
-			class="slide title"
+			class="slide main"
 			id="cover"
 		>
-			<h2 class="vh">Accessibility and typography</h2>
-			<img
-				class="cover width height"
-				src="pictures/cover.png"
-				alt="Here I'll add a cool picture (maybe)"
-			/>
-
+			<h2 class="name">Accessibility and typography</h2>
+			<div class="credits">
+				<span>Tbilisi a11y and UX day</span>
+				<time>November 2, 2024</time>
+				<span>Tanya Fokina</span>
+			</div>
 			<style>
 				#cover::after {
 					visibility: hidden;
@@ -45,13 +44,13 @@
 			</style>
 		</section>
 
-		<section class="slide">
+		<section class="slide shout">
 			<figure>
 				<img
-					src="pictures/presentation-qr.png"
+					src="pictures/presentation-qr.svg"
 					alt="Presentation QR"
-					width="440px"
-					height="440px"
+					width="300px"
+					height="300px"
 				/>
 				<figcaption>
 					<a href="https://tatianafokina.github.io/talks/a11y-and-typography/"
@@ -64,19 +63,22 @@
 		<section class="slide">
 			<h2>Who is talking?</h2>
 			<ul>
-				<li>Developer with a passion for web accessibility</li>
-				<li>Google's Women Techmakers Ambassador</li>
+				<li>Developer with a passion for web accessibility.</li>
+				<li>Google's Women Techmakers Ambassador.</li>
 				<li>
 					Co-host for the podcast
 					<a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a>
 					🍍
 				</li>
-				<li>Editor of the Accessibility at Doka Guide</li>
 				<li>
-					Spontaneous author of
+					Editor of the Accessibility section at
+					<a href="https://doka.guide">Doka Guide</a>.
+				</li>
+				<li>
+					Author of
 					<a href="https://tatiana-fokina-blog.ru"
 						>blog on digital accessibility</a
-					>
+					>.
 				</li>
 			</ul>
 		</section>
@@ -92,10 +94,9 @@
 		<section class="slide">
 			<h2>Benefits of typography</h2>
 			<ul>
-				<li>Increase accessibility and usability of your interfaces.</li>
-				<li>Set the right mood or tone.</li>
-				<li>Improve product and brand appearance.</li>
-				<li>Create a consistent brand identity.</li>
+				<li class="next">Make the interface more accessible and usable.</li>
+				<li class="next">Set the right mood or tone.</li>
+				<li class="next">Improve product and brand appearance.</li>
 			</ul>
 			<img
 				src="pictures/benefits.png"
@@ -104,206 +105,603 @@
 			/>
 		</section>
 
-		<section class="slide">
-			<h2>Accessibility and usability</h2>
-			<p>
-				<b>Usability</b> is a measure of how effective, efficient, and
-				satisfying interfaces are.
-			</p>
-			<p>
-				<b>Accessibility (a11y)</b> focuses on the possibility to use interfaces
-				for people with disabilities first of all.
-			</p>
-			<img
-				src="pictures/grab-the-table.png"
-				height="200px"
-				alt=""
-			/>
-		</section>
-
 		<section class="slide shout">
 			<p>
 				Accessibility in typography is about
-				<mark>visual&nbsp;clarity</mark>
+				<mark>visual&nbsp;clarity</mark>.
 			</p>
 		</section>
 
+		<section class="slide shout chapter">
+			<h2>Legibility</h2>
+		</section>
+
 		<section class="slide">
-			<h2>Visual clarity</h2>
+			<h2>What is legibility?</h2>
 			<p>
-				How easy to see and understand in design, clearly showing information.
+				How it is easy to see, distinguish, and recognize the characters and
+				words.
 			</p>
 			<img
 				src="pictures/tiny-paper.png"
-				height="280px"
+				height="315px"
 				class="filtered-img"
 				alt=""
 			/>
 		</section>
 
 		<section class="slide">
-			<h2>How to measure clarity?</h2>
-			<p>
-				User-friendly typography based on two turtles — legibility and
-				readability.
-			</p>
-			<img
-				src="pictures/turtles.png"
-				height="280px"
-				class="filtered-img"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>Readability and legibility</h2>
-			<p><b>Readability</b> refers to how easy text is to read.</p>
-			<p>
-				<b>Legibility</b> refers to how easy to see, distinguish, and recognize
-				the characters and words.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Legibility components [1]</h2>
-			<ul>
-				<li class="next">Typeface.</li>
-				<li class="next">X-height.</li>
-				<li class="next">Counter.</li>
-				<li class="next">Letter spacing…</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Legibility components [2]</h2>
-			<ul>
-				<li class="next">Distinct letterforms.</li>
-				<li class="next">Font size.</li>
-				<li class="next">Font weight.</li>
-				<li class="next">Line height.</li>
-				<li class="next">Contrast.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Legibility components [3]</h2>
-			<ul>
-				<li>
-					<b class="next">Character width</b> is the overall width of every font
-					characters.
-				</li>
-				<li class="next">
-					<b>Stroke contrast</b> is differences between thick and thin strokes.
-				</li>
-				<li class="next">
-					<b>Familiarity</b> is the measure how much letter shapes is familiar
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Typeface and font</h2>
-			<ul>
-				<li>
-					<b>Typeface</b> is a family of related designs for text characters
-					(letters, numbers, and symbols)
-				</li>
-				<li>
-					<b>Font</b> is a specific version of a typeface with particular
-					characteristics including weight (bold or regular), style (italic or
-					normal), and size.
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Typeface vs. font</h2>
+			<h2>Typefaces and fonts</h2>
 			<img
 				src="pictures/typeface-and-font.png"
-				height="400px"
-				alt=""
+				height="380px"
+				alt="Typeface is IBM Plex Sans. Fonts: Thin one with size 75 pixels, extra light one with size 38 pixels, and light, semibold, italic bold with size 50 pixels."
 			/>
 		</section>
 
 		<section class="slide">
-			<h2>Typeface styles [1]</h2>
-			<p>
-				<b>Serif</b> has a small decorative strokes (serifs) on the tops and
-				bottoms of the letters.
-			</p>
-			<p><b>Sans-serif (sans)</b> is a typeface designed without serifs.</p>
+			<h2>Typefaces</h2>
 			<iframe
-				title="Serif and sans-serif"
-				src="demos/sans-sanserif.html"
+				title="Serif, ans-serif, monospaced and display typefaces"
+				src="demos/font-style.html"
 				loading="lazy"
-				height="230"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Typeface styles [2]</h2>
-			<p>
-				<b>Monospaced (mono) typefaces</b> include characters that all take up
-				the same amount of horizontal space.
-			</p>
-			<p>
-				<b>Display typefaces</b> contain more decorative and eye-catching
-				designs than regular fonts.
-			</p>
-			<iframe
-				title="Mono and display typefaces"
-				src="demos/mono-display.html"
-				loading="lazy"
-				height="190"
+				height="380"
 			></iframe>
 		</section>
 
 		<section class="slide shout">
 			<p>
-				Usually sans-serif typefaces are <mark>more&nbsp;accessible</mark> than
-				serif, display or monospaced ones.
+				Usually, sans-serif typefaces are <mark>more&nbsp;legible</mark> than
+				serif, display, or monospaced ones.
 			</p>
 		</section>
 
 		<section class="slide">
-			<h2>Basic accessible typefaces</h2>
-			<ul>
-				<li>Arial,</li>
-				<li>Calibri,</li>
-				<li>Poppins,</li>
-				<li>Tahoma,</li>
-				<li>Verdana.</li>
-			</ul>
+			<h2>Basic legible typefaces</h2>
 			<img
 				src="pictures/default-typefaces.png"
-				height="140px"
-				alt=""
+				height="380px"
+				alt="Arial, Calibri, Roboto, Tahoma, Poppins, Verdana."
 			/>
 		</section>
 
 		<section class="slide">
-			<h2>Special accessible typefaces</h2>
-			<ul>
-				<li>Atkinson Hyperlegible,</li>
-				<li>Hargreaves (Scope),</li>
-				<li>FS Me (MenCAP),</li>
-				<li>Lexend.</li>
-			</ul>
+			<h2>Special legible typefaces</h2>
 			<img
 				src="pictures/special-typefaces.png"
-				height="190px"
-				alt=""
+				height="380px"
+				alt="Atkinson Hyperlegible, Lexend."
 			/>
 		</section>
 
 		<section class="slide">
-			<h2>Typefaces style on practice</h2>
+			<h2>Typefaces on practice</h2>
 			<iframe
 				title="Typefaces with different style"
 				src="demos/typefaces-style.html"
 				loading="lazy"
 				height="380"
 			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Font size</h2>
+			<img
+				src="pictures/font-size.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				The minimum font size for desktops is
+				<mark>16&nbsp;pixels&nbsp;</mark>; for mobiles, the good size is
+				<mark>12&nbsp;pixels&nbsp;</mark> and bigger.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Font size on practice</h2>
+			<iframe
+				title="Small and big font sizes"
+				src="demos/font-size.html"
+				loading="lazy"
+				height="380px"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Users settings: Text customizing</h2>
+			<img
+				src="pictures/text-resize.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Text must be <mark>resizable between 200-400%</mark> without requiring
+				horizontal scrolling in a full-screen window.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Fluid typography</h2>
+			<p>
+				Responsive typography technique where the text scales automatically with
+				the screen size.
+			</p>
+			<img
+				src="pictures/fluid-terminator.png"
+				class="filtered-img"
+				height="280px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				For text <mark>use&nbsp;flexible&nbsp;units</mark>, such as %, em, or
+				rem instead of absolute font sizes like pixels.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Default font size: 16 pixels</h2>
+			<img
+				src="pictures/default-font-size-google.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Custom font size: 36 pixels 🤔</h2>
+			<img
+				src="pictures/36px-font-size-google.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Let's try again</h2>
+			<img
+				src="pictures/default-font-size-collective.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Now it is 36 pixels 🎉</h2>
+			<img
+				src="pictures/36px-font-size-collective.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Users settings: Page zoom</h2>
+			<img
+				src="pictures/text-zoom.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Allow users to zoom into page content in browsers
+				<mark>between&nbsp;200%&nbsp;and&nbsp;400%</mark> without loss of
+				content or functionality.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Clipped text with 200%</h2>
+			<img
+				src="pictures/zoom-200-pinterest.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Horizontal scroll with 200%</h2>
+			<img
+				src="pictures/zoom-200-ym.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Overlapping text with 200%</h2>
+			<img
+				src="pictures/zoom-200-skillbox.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Default text zoom (100%)</h2>
+			<img
+				src="pictures/zoom-100.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Increased text zoom (200%)</h2>
+			<img
+				src="pictures/zoom-200.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Wow, no issues with 400%</h2>
+			<img
+				src="pictures/zoom-400.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Font weight</h2>
+			<img
+				src="pictures/font-weight.png"
+				height="380px"
+				alt="Letters A with different font sizes: thin (100), extraLight (200), light (300), regular
+				(400), semiBold (600), bold (700)."
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<mark>Regular fonts</mark> are good for most text. <mark>Bold</mark> is
+				suitable for headings and emphasis.
+				<mark>Thin&nbsp;and&nbsp;light&nbsp;fonts</mark> work best for
+				decorative text.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Font weight on practice</h2>
+			<iframe
+				title="Different font weight"
+				src="demos/font-weight.html"
+				loading="lazy"
+				height="380px"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Thin typeface in the wild</h2>
+			<img
+				src="pictures/thin-typeface.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>X-height</h2>
+			<img
+				src="pictures/x-height.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				It's easier to read texts with
+				<mark>larger&nbsp;uppercase&nbsp;letters</mark> in proportion to
+				lowercase letters.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>X-height on practice</h2>
+			<iframe
+				title="Font x-height"
+				src="demos/x-height.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Aperture</h2>
+			<img
+				src="pictures/counters.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Open and closed aperture</h2>
+			<img
+				src="pictures/open-closed-counters.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>Use typefaces with <mark>more open aperture</mark>.</p>
+		</section>
+
+		<section class="slide">
+			<h2>Aperture on practice (latin)</h2>
+			<iframe
+				title="Fonts with closed and open counters"
+				src="demos/counters-lathin.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Aperture on practice (cyrillic)</h2>
+			<iframe
+				title="Fonts with closed and open counters"
+				src="demos/counters-cyrillic.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Letter spacing (tracking)</h2>
+			<img
+				src="pictures/letter-spacing.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<mark>Bigger&nbsp;letter&nbsp;spacing</mark> helps with the legibility
+				of all-caps text or thin fonts.
+			</p>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<mark>Smaller&nbsp;letter&nbsp;spacing</mark> is legit only for large
+				fonts.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Letter spacing on practice</h2>
+			<iframe
+				title="Font letter spacing"
+				src="demos/letter-spacing.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Custom letter spacing</h2>
+			<iframe
+				title="Thin font with more letter spacing"
+				src="demos/thin-font-tracking.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Letterforms</h2>
+			<p>Visual shape or design of a letter.</p>
+			<img
+				src="pictures/imposters.png"
+				class="filtered-img"
+				height="315px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Latin imposter letters</h2>
+			<img
+				src="pictures/imposter-letters-en.png"
+				height="380px"
+				alt="Typefaces Palatino Linotype and Lexend. English alphabet: I, l, 1, B, 8, C, G, 0, e, a, c, o."
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Cyrillic imposter letters</h2>
+			<img
+				src="pictures/imposter-letters-ru.png"
+				height="380px"
+				alt="Typefaces Palatino Linotype and Lexend. Cyrillic alphabet: З, 3, В, С, О, 0, щ, ц, г, т, ь, ъ, с, о, б, 6."
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Mirroring characters</h2>
+			<img
+				src="pictures/mirroring-letters.png"
+				height="380px"
+				alt="Typefaces Times New Roman and Lato. English alphabet: nu, 96, rn, n, db, i!, 6g."
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Use typefaces where similar letters are
+				<mark>easy&nbsp;to&nbsp;tell&nbsp;apart</mark>.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Letterforms on practice</h2>
+			<iframe
+				title="Latin indistinguishable and clear letterforms."
+				src="demos/letterforms.html"
+				loading="lazy"
+				height="380"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Line height (leading)</h2>
+			<img
+				src="pictures/line-height.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				On a desktop, space between lines should be
+				<mark>1.5&nbsp;to&nbsp;2&nbsp;times</mark> the text size. On mobile
+				phones, make it <mark>1.3&nbsp;to&nbsp;1.45&nbsp;times</mark>.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Line height on practice</h2>
+			<iframe
+				title="Line height examples"
+				src="demos/line-height.html"
+				loading="lazy"
+				height="380px"
+			></iframe>
+		</section>
+
+		<section class="slide">
+			<h2>Line width (length)</h2>
+			<img
+				src="pictures/line-width.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				The optimal number of words per line is
+				<mark>between&nbsp;45&nbsp;and&nbsp;80</mark> with spaces. It depends on
+				language and screen size.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Long line width: 207 ch</h2>
+			<img
+				src="pictures/long-line-width.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Optimal line width: 100 ch</h2>
+			<img
+				src="pictures/optimal-line-width.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Contrast</h2>
+			<p>
+				<mark>Difference in brightness</mark> between two colors: For text and
+				its background.
+			</p>
+			<img
+				src="pictures/contrast.png"
+				height="273px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Contrast ratio anatomy</h2>
+			<img
+				src="pictures/contrast-ratio.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Big text should be <mark>3&nbsp;(3:1)&nbsp;to 7&nbsp;(7:1)</mark> times
+				lighter than its background. Small text needs to be at least
+				<mark>4.5&nbsp;(4.5:1)</mark> times lighter than its background.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Contrast ratio</h2>
+			<img
+				src="pictures/different-contrast-ratio.png"
+				height="380px"
+				alt="Low 1:79:1; minimum: 3:76:1; hight 10:53:1"
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Hight contrast ratio: Dark</h2>
+			<img
+				src="pictures/too-contrast-dark.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Hight contrast ratio: Light</h2>
+			<img
+				src="pictures/too-contrast-light.png"
+				height="380px"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Too hight contrast for somebody</h2>
+			<ul>
+				<li>Astigmatism.</li>
+				<li>Light sensitivity.</li>
+				<li>Attention-deficit/hyperactivity disorder (ADHD).</li>
+				<li>Autistic spectrum disorder (ASD).</li>
+			</ul>
+			<img
+				src="pictures/too-bright.png"
+				height="180px"
+				class="filtered-img"
+				alt=""
+			/>
+		</section>
+
+		<section class="slide">
+			<h2>Comfortable contrast ratio</h2>
+			<img
+				src="pictures/too-contrast-medium.png"
+				height="380px"
+				alt=""
+			/>
 		</section>
 
 		<section class="slide">
@@ -315,39 +713,45 @@
 			</p>
 			<img
 				src="pictures/dyslexia-meme.png"
-				height="290px"
+				height="270px"
 				class="filtered-img"
 				alt=""
 			/>
 		</section>
 
-		<section class="slide shout">
-			<p>
-				About <mark>10%</mark> of the world's adults, or
-				<mark>750&nbsp;million&nbsp;people</mark>, cannot read or write.
-				Dyslexia is a factor in 70% to 80% of these cases.
-			</p>
-		</section>
-
 		<section class="slide">
-			<h2>Main symptoms of dyslexia</h2>
-			<ul>
-				<li>Hard to listen and maintain focus.</li>
-				<li>Slowly reading.</li>
-				<li>Hard to scan or skim text.</li>
-				<li>
-					Confuse visually similar words like “cat” and “cot,” «голова» и
-					«глава».
-				</li>
-				<li>Spelling problems.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Dyslexia simulation</h2>
+			<h2>Dyslexia simulation: Wavy</h2>
 			<figure>
 				<img
-					src="pictures/types-of-dyslexia.png"
+					src="pictures/types-of-dyslexia-wavy.png"
+					height="350px"
+					alt=""
+				/>
+				<figcaption>
+					<a href="https://youtu.be/RDFkwkSgjtg">Dyslexia Improvements</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Dyslexia simulation: Swirl</h2>
+			<figure>
+				<img
+					src="pictures/types-of-dyslexia-swirl.png"
+					height="350px"
+					alt=""
+				/>
+				<figcaption>
+					<a href="https://youtu.be/RDFkwkSgjtg">Dyslexia Improvements</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Dyslexia simulation: River</h2>
+			<figure>
+				<img
+					src="pictures/types-of-dyslexia-river.png"
 					height="350px"
 					alt=""
 				/>
@@ -359,82 +763,50 @@
 
 		<section class="slide shout">
 			<p>
+				About <mark>10%</mark> or <mark>750&nbsp;million</mark> of the world's
+				adults are dyslexic.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>What affected dyslexia?</h2>
+			<p>
 				Dyslexia can appear differently and be more or less common depending on
 				<mark>language rules and writing system</mark>.
 			</p>
+			<img
+				src="pictures/running-away-baloon.png"
+				class="filtered-img"
+				height="273px"
+				alt=""
+			/>
 		</section>
 
 		<section class="slide">
 			<h2>Language rules</h2>
-			<p>
-				The complexity of language depends on its spelling, grammar, and
-				pronunciation.
-			</p>
-			<ul>
-				<li><b>Easier languages</b>: Italian, German, etc.</li>
-				<li><b>Harder languages</b>: English, French, Russian, etc.</li>
-			</ul>
+			<img
+				src="pictures/language-rules.png"
+				height="380px"
+				alt="Easier languages for dyslexic people: German and Norwegian. Harder languages: Russian and English."
+			/>
 		</section>
 
 		<section class="slide">
-			<h2>Writing system</h2>
-			<p>Dyslexia can be affected by the type of writing system.</p>
-			<ul>
-				<li>
-					<b>Albhabetic languages</b> lead to trouble connecting sounds to
-					letters. Examples: English, Hiragana, Hangul.
-				</li>
-				<li>
-					<b>Logographic languages</b> involve problems with visual processing,
-					sound recognition, and memorizing characters. Examples: Chinese,
-					Kanji, Hanja.
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Dyslexia-friendly typeface rules</h2>
-			<ul>
-				<li>Simple, plain and easy to read.</li>
-				<li>Light or regular font weight.</li>
-				<li>Lowercase letters.</li>
-				<li>Distinct and wide letterforms.</li>
-				<li>Moderately spaced characters.</li>
-			</ul>
+			<h2>Writing systems</h2>
+			<img
+				src="pictures/writing-system.png"
+				height="380px"
+				alt="Alphabetic writing systems: French, Korean Hangul. Logographic ones: Chinese, Japanese Kanji."
+			/>
 		</section>
 
 		<section class="slide">
 			<h2>Dyslexia-friendly typefaces</h2>
-			<p>All sans-serif typefaces, especially:</p>
-			<ul>
-				<li>Arial,</li>
-				<li>Comic Sans,</li>
-				<li>Omotype,</li>
-				<li>Open Sans,</li>
-				<li>Roboto.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Special dyslexc typefaces</h2>
-			<ul>
-				<li><a href="https://opendyslexic.org/">OpenDyslexic</a>,</li>
-				<li>
-					<a href="http://www.readregular.com/english/regular.html"
-						>Read Regular</a
-					>,
-				</li>
-				<li>
-					<a href="http://www.k-type.com/fonts/lexie-readable/"
-						>Lexie Readable</a
-					>,
-				</li>
-				<li>
-					<a href="https://www.fontsquirrel.com/fonts/tiresias-infofont"
-						>Tiresias</a
-					>.
-				</li>
-			</ul>
+			<img
+				src="pictures/default-dyslexia-fr-typefaces.png"
+				height="380px"
+				alt="Arial, Calibri, Comic Sans, Josefin Sans, Open Sans, OpenDyslexic."
+			/>
 		</section>
 
 		<section class="slide">
@@ -456,629 +828,118 @@
 		</section>
 
 		<section class="slide">
-			<h2>X-height</h2>
-			<p>Height of lowercase letters in proportion to capital letters.</p>
-			<img
-				src="pictures/x-height.png"
-				height="330px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Typefaces with <mark>larger&nbsp;lowercase&nbsp;letters</mark> in
-				proportion to uppercase letters are easier to read.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>X-height on practice</h2>
-			<iframe
-				title="Font x-height"
-				src="demos/x-height.html"
-				loading="lazy"
-				height="380"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Counter</h2>
-			<p>Partially or fully enclosed space inside letters and symbols.</p>
-			<img
-				src="pictures/counters.png"
-				height="320px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>Open and closed counters</h2>
-			<ul>
-				<li class="next">
-					<b>Closed counters</b> is completely enclosed spaces within letters.
-				</li>
-				<li class="next">
-					<b>Open counters</b> have an opening aperture that connects to the
-					outside of the letters.
-				</li>
-			</ul>
-			<img
-				class="next"
-				src="pictures/open-closed-counters.png"
-				height="230px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide shout">
-			<p>Prefer typefaces with <mark>open counters</mark>.</p>
-		</section>
-
-		<section class="slide">
-			<h2>Counters on practice (lathin)</h2>
-			<iframe
-				title="Fonts with closed and open counters"
-				src="demos/counters-lathin.html"
-				loading="lazy"
-				height="380"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Counters on practice (cyrillic)</h2>
-			<iframe
-				title="Fonts with closed and open counters"
-				src="demos/counters-cyrillic.html"
-				loading="lazy"
-				height="380"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Letter spacing (or tracking)</h2>
-			<p>
-				Horizontal spacing between all letters in a word or section of text.
-			</p>
-			<img
-				src="pictures/letter-spacing.png"
-				height="330px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				More space between a letters helps with the readability of
-				<mark>all-caps&nbsp;text</mark> or
-				an&nbsp;<mark>extremely&nbsp;thin&nbsp;font</mark>.
-			</p>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Less letters space is legit only for a
-				<mark>very&nbsp;large&nbsp;font</mark>.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Letter spacing on practice</h2>
-			<iframe
-				title="Font letter spacing"
-				src="demos/letter-spacing.html"
-				loading="lazy"
-				height="380"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Less letters space</h2>
-			<iframe
-				title="Thin font with more letter spacing"
-				src="demos/thin-font-tracking.html"
-				loading="lazy"
-				height="380"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Users preferences</h2>
-			<p>
-				Users can adjust text spacing via plagins to make it easier to read
-				because of their:
-			</p>
-			<ul>
-				<li>Dyslexia</li>
-				<li>Visual impairments</li>
-				<li>Other personal preferences.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Support user-defined settings</h2>
-			<p>
-				Set these text style properties and ensure there is
-				<mark>no loss of content or functionality</mark>:
-			</p>
-			<ul>
-				<li>Letter spacing to at least 0.12 times the font size</li>
-				<li>Word spacing to at least 0.16 times the font size</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Good example</h2>
-			<img
-				src="pictures/reddit-letter-spacing.png"
-				height="400px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>It's no good</h2>
-			<img
-				src="pictures/ym-letter-spacing.png"
-				height="400px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>Distinct letterforms</h2>
-			<p>
-				The visual shape or design of a letter. Concerns about letterform
-				iclude:
-			</p>
-			<ul>
-				<li>Imposter letters.</li>
-				<li>Mirroring (flipping) letters.</li>
-				<li>Uppercases and lowercases.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Imposter letters</h2>
-			<p>
-				Letters and other characters which is identical with a different one in
-				a typeface. Examples: “L,” “l” and “1,” «З» and «3,» «В,» and «8».
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Mirroring characters</h2>
-			<p>
-				Characters which looks like another when flipped or rotated. Examples:
-				“b” and “d” in English, “0” and “O.”
-			</p>
-			<p>Russian language doesn't contain flipped letters.</p>
-		</section>
-
-		<section class="slide">
-			<h2>Letter cases</h2>
-			<p>
-				Distinction between the letters that are in larger uppercase (capitals)
-				and smaller lowercase.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>The most important characters</h2>
-			<ul>
-				<li>Lathin uppercases: “C,” “O,” “0,” “B,” and “8”.</li>
-				<li>
-					Cyrillic uppercases: «З,» «3,» «С,» «О,» «0,» «В,» «Б,» and «8».
-				</li>
-				<li>Lathin lowercases: “a” “e,” “o,” and “c”.</li>
-				<li>Cyrillic lowercases: «о,» «с,» «б,» «6,» «ь,» «ы,» and «ъ».</li>
-			</ul>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Use typefaces that have a clear differentiation between similar
-				characters.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Font size</h2>
-			<p>
-				Number of a typeface that measures the size of letters and other
-				characters on a screen.
-			</p>
-			<img
-				src="pictures/font-size.png"
-				height="280px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Minimum font size is
-				<mark>16&nbsp;pixels&nbsp;(12&nbsp;points)</mark> and bigger for desktop
-				intarfaces and not below
-				<mark>12&nbsp;pixels&nbsp;(9&nbsp;points)</mark> for mobile interfaces.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Font size on practice</h2>
-			<iframe
-				title="Small and big font sizes"
-				src="demos/font-size.html"
-				loading="lazy"
-				height="380px"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Users preferences</h2>
-			<p>
-				Users can setting up the font size via system features, browser
-				settings, or browser extensions and plagins:
-			</p>
-			<ul>
-				<li>Control font size.</li>
-				<li>Resize text without assistive technology.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Users preferences</h2>
-			<p>
-				Users can setting up the font size via system features, browser
-				settings, or browser extensions and plagins:
-			</p>
-			<ul>
-				<li>Control font size.</li>
-				<li>Resize text without assistive technology.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Text resizing</h2>
-			<p>
-				All users can change the font size in browesers setting. It's lead to
-				change the font size not only in the user agent, but in web page
-				interfaces too.
-			</p>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Text can be resized without assistive technology up to 200 or 400
-				percent in a way that does not require the user to scroll horizontally
-				to read a line of text on a full-screen window.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Fluid typography</h2>
-			<p>
-				A responsive typography technique where the text scales automatically
-				with the screen size.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Fluid typography rules</h2>
-			<ul>
-				<li>Make your default font size reasonably big (at least 10 point)</li>
-				<li>
-					Do not use absolute font sizes and use flexible units such as %, em,
-					or rem.
-				</li>
-				<li>
-					If your site targets senior citizens, use bigger default font sizes
-					(at least 12 point).
-				</li>
-				<li>Fluid sizing vs breakpoint-based sizing</li>
-				<li>
-					Line length can be unpredictable at different screen widths for text
-					whose size is static.
-				</li>
-				<li>
-					Allowing people to retain control over the font size displayed in
-					their browser is one of the most basic of accessibility requirements.
-				</li>
-				<li>
-					Fluid typography doesn’t play nicely with the default browser font
-					size and therefore shouldn’t be used until that changes.
-				</li>
-				<li>
-					Avoid providing images of text, as such text cannot be resized through
-					text resizing.
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Text zoom</h2>
-			<p>
-				Default browser feature zoom by decreasing the viewport size; as content
-				increases, CSS breakpoints will fire and display content designed for
-				smaller screens. This results in everything appearing larger while
-				remaining readable.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Text zoom rules</h2>
-			<ul>
-				<li>
-					Don't usr CSS static units, that is, pixels for sizing:
-					<code>width: 200px</code>, <code>height: 200px</code> and
-					<code>overflow: hidden</code>
-				</li>
-				<li>
-					Aoid providing images of text, as such text may become blurry when
-					zoomed.
-				</li>
-				<li>avoid horizontal scrolling on viewports 320px wide and larger.</li>
-				<li>
-					Define font sizes and text container dimensions in relative units,
-					such as ems, rems, percents, or named font sizes. Avoid explicitly
-					defining the width and height of containers in pixels.
-				</li>
-				<li>Use CSS, rather than tables, for layout.</li>
-				<li>
-					Provide sufficient space between columns of text to mitigate the risk
-					of text overflowing their containers.
-				</li>
-				<li>
-					If images of text must be used, the text should be at least 18pt
-					(24px).
-				</li>
-				<li>Don't disable zoom</li>
-				<li>
-					<code
-						><meta
-							name="viewport"
-							content="width=device-width, initial-scale=1, user-scalable=no"
-					/></code>
-				</li>
-				<li>
-					<code
-						><meta
-							name="viewport"
-							content="width=device-width, initial-scale=1, maximum-scale=1"
-					/></code>
-				</li>
-				<li>
-					<code
-						><meta
-							name="viewport"
-							content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-					/></code>
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Text can be resized without assistive technology up to 200 or 400
-				percent without loss of content or functionality.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Font weight</h2>
-			<p>
-				Thickness of the lines in each letter. Can be light (300,) regular
-				(400,) semibold (600,) bold (700,) etc.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Font weight in theory</h2>
-			<p class="next">
-				<b>Thin fonts</b> are too light, and it is hard to read them.
-			</p>
-			<p class="next">
-				<b>Regular fonts</b> are more readable because they look simpler,
-				cleaner, and less chunky.
-			</p>
-			<p class="next">
-				<b>Heavy, bold fonts</b> are too dark and can be unreadable.
-			</p>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Use <b>regular fonts</b> for most text. Save <b>bold</b> for headings
-				and emphasis. <b>Thin fonts</b> work best for decorative text.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Font weight on practice</h2>
-			<iframe
-				title="Different font weight"
-				src="demos/font-weight.html"
-				loading="lazy"
-				height="380px"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Thin typeface in the wild</h2>
-			<img
-				src="pictures/thin-typeface.png"
-				height="390px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>Line height (leading)</h2>
-			<p>
-				The space between lines of text, which can change based on body text
-				size.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Optimal line height</h2>
-			<ul>
-				<li>
-					For desktop interfaces optimal value is <mark>between 1.5 to 2</mark>.
-				</li>
-				<li>
-					Space within paragraphs is <mark>at least 2 times</mark> the font
-					size.
-				</li>
-				<li>
-					For mobiles optimal value is <mark>between 1.3 and 1.45</mark>, or
-					<mark>around 1.5</mark> if you use one value for all screen sizes.
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Line height on practice</h2>
-			<iframe
-				title="Line height examples"
-				src="demos/line-height.html"
-				loading="lazy"
-				height="380px"
-			></iframe>
-		</section>
-
-		<section class="slide">
-			<h2>Line width (lenght)</h2>
-			<p>
-				Width of a block of text, measured in inches or number of characters.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Line width in theory</h2>
-			<ul>
-				<li>Line width depends on the typeface and language.</li>
-				<li>
-					Longer lines need more line height, shorter ones need less height.
-				</li>
-				<li>
-					Line width doesn't matter on phones because the screen is small and
-					narrow.
-				</li>
-			</ul>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				The optimal number of words per line is <mark>between 45 and 80</mark>,
-				including spaces.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Long line width: 207 ch</h2>
-			<img
-				src="pictures/long-line-width.png"
-				height="390px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>Optimal line width: 100 ch</h2>
-			<img
-				src="pictures/optimal-line-width.png"
-				height="390px"
-				alt=""
-			/>
-		</section>
-
-		<section class="slide">
-			<h2>Contrast</h2>
-			<p>
-				Represent how different one color is from another color between text and
-				its background.
-			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Contrast in nutshell</h2>
-			<p>Contrast ratio depending on a few factors:</p>
-			<ul>
-				<li>Font size.</li>
-				<li>Font weight.</li>
-				<li>Font style.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Contrast important consurns</h2>
-			<p>
-				Not all users need hight contrast interfaces. It can be damaged for
-				people with:
-			</p>
-			<ul>
-				<li>Astigmatism.</li>
-				<li>Light sensetivity.</li>
-				<li>Attention-deficit/hyperactivity disorder (ADHD.)</li>
-				<li>Autistic Spectrum Disorder (ASD.)</li>
-			</ul>
-		</section>
-
-		<section class="slide shout">
-			<p>
-				Contrast ratio for large text should be between 3:1 and 7:1 against the
-				background, small text should be 4.5:1 against the background.
-			</p>
-		</section>
-
-		<section class="slide">
 			<h2>How to measure legibility?</h2>
-			<p>
-				Check reading speed in words per minute for a sample of users, as they
-				read some simple text. If users are, on average, say, 20% slower when
-				reading from your design than when reading from a reference design, then
-				you know that your site has poor legibility.
+			<p class="next">
+				<mark>User testing</mark>: Check the speed when users read from the
+				design and the same text without it.
 			</p>
+			<p class="next">
+				<mark>Automation tools</mark>: Find the problems with text contrast.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Tools: Typography</h2>
+			<ul>
+				<li>
+					<a href="https://fonts.google.com">Google fonts</a>
+				</li>
+				<li>
+					<a href="https://fluid.style/">Accessible fluid type generator</a>
+				</li>
+				<li><a href="https://nowodzinski.pl/syncope/">Syncope</a>.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Tools: Contrast ratio</h2>
+			<ul>
+				<li>
+					<a href="https://colourcontrast.cc">Colour contrast checker</a>
+				</li>
+				<li>
+					<a href="https://huetone.ardov.me">Hueton</a>
+				</li>
+				<li>
+					<a href="https://randoma11y.com">RandomA11y</a>
+				</li>
+				<li>
+					<a href="https://www.deque.com/axe/devtools/">axe DevTools</a>
+				</li>
+				<li>
+					<a
+						href="https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk"
+						>Chrome Lighthouse</a
+					>
+				</li>
+				<li>Chrome, Firefox, and Safari developer tools.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Tools for Figma</h2>
+			<ul>
+				<li>
+					<a
+						href="https://www.figma.com/community/plugin/1208180794570801545/includeaccessibility-annotations/"
+						>Include</a
+					>: Contrast checker, color deficiencies simulator, text
+					resizing–guidance, responsive reflow–guidance.
+				</li>
+				<li>
+					<a href="https://www.figma.com/community/file/953682768192596304/"
+						>A11y Annotation Kit</a
+					>: Check reflow and zoom.
+				</li>
+				<li>
+					<a
+						href="https://www.figma.com/community/plugin/732603254453395948/stark-contrast-accessibility-checker/"
+						>Stark contrast and accessibility checker</a
+					>: Typography analysis, vision simulator.
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide shout chapter">
+			<h2>Readability</h2>
+		</section>
+
+		<section class="slide">
+			<h2>What is readability?</h2>
+			<p>How easy text is to read.</p>
+			<img
+				src="pictures/otter.png"
+				class="filtered-img"
+				height="315px"
+				alt=""
+			/>
 		</section>
 
 		<section class="slide">
 			<h2>Readability components</h2>
 			<ul>
-				<li>Legibility.</li>
-				<li>
-					<b>Consistency and hierarchy</b> — consistent fonts and styles for
-					headings, body text.
+				<li class="next">Legibility.</li>
+				<li class="next">
+					Level of complexity of the text and its familiarity.
 				</li>
-				<li>Level of complexity of the text and its familiarity.</li>
-			</ul>
-		</section>
-
-		<section class="slide">
-			<h2>Readability unique score components</h2>
-			<ul>
-				<li>How long words and sentences are.</li>
-				<li>Passiave or active voice.</li>
-				<li>Spelling and grammar.</li>
-				<li>Match the tone to an audience.</li>
+				<li class="next">Spelling and grammar.</li>
+				<li class="next">
+					Consistency of fonts and hierarchy of text content.
+				</li>
 			</ul>
 		</section>
 
 		<section class="slide">
 			<h2>How to measure readability?</h2>
 			<p>
-				Usually scored by computer via readability calculators based on
-				different readability formulas.
+				Scored automatically via <mark>readability calculators</mark> based on
+				readability formulas.
 			</p>
-		</section>
-
-		<section class="slide">
-			<h2>Readability formulas</h2>
 			<ul>
 				<li>
 					<a
 						href="https://readabilityformulas.com/learn-how-to-use-the-flesch-kincaid-grade-level/"
-						>Flesch Kincaid</a
+						>Flesch-Kincaid reading level</a
 					>.
 				</li>
 				<li>
@@ -1093,52 +954,141 @@
 						>Dale-Chall</a
 					>.
 				</li>
-				<li>
-					<a
-						href="https://readabilityformulas.com/calculator-spache-readability-formula.php"
-						>Spache</a
-					>.
-				</li>
+
+				<li><a href="https://textometr.ru">Текстометр</a>.</li>
+			</ul>
+		</section>
+
+		<section class="slide shout chapter">
+			<h2>Final checklists</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Legibility checklist [1] ✅</h2>
+			<ul>
+				<li>Use sans-serif fonts with regular width for body text.</li>
+				<li>Ensure clear letter distinction and open apertures.</li>
+				<li>Verify proper letter spacing and x-height ratio.</li>
+				<li>Desktop font sizing: minimum 16 pixels.</li>
+				<li>Mobile font sizing: minimum 12 pixels.</li>
+				<li>Use relative size units (em, rem, %).</li>
 			</ul>
 		</section>
 
 		<section class="slide">
-			<h2>Typography checklist</h2>
+			<h2>Legibility checklist [2] ✅</h2>
 			<ul>
-				<li class="next">🚧</li>
-				<li class="next">🚧</li>
+				<li>Desktop line height: 1.5–2.</li>
+				<li>Mobile line height: 1.3–1.45.</li>
+				<li>Line length: 45–80 characters.</li>
+				<li>Maintain adequate text-background contrast.</li>
+				<li>
+					Verify browser text resizing, content zooming, and responsive
+					behavior.
+				</li>
+				<li>Run automated accessibility checks and tests with users.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Readability checklist ✅</h2>
+			<ul>
+				<li>Match the tone to the audience.</li>
+				<li>Use active voice.</li>
+				<li>Keep sentences concise.</li>
+				<li>Choose simple, short words.</li>
+				<li>Run spelling/grammar check.</li>
+				<li>Test with readability tools.</li>
 			</ul>
 		</section>
 
 		<section class="slide">
 			<h2>Links</h2>
 			<div
-				class="columns two"
+				class="columns three"
 				id="pictures"
 			>
 				<figure>
 					<img
-						src="pictures/doka-qr.png"
-						alt="Doka web site QR"
+						src="pictures/doka-qr.svg"
+						alt="Doka Guide website QR"
 						width="200px"
 						height="auto"
 					/>
 					<figcaption>
-						<a href="https://doka.guide/">Doka</a>
+						<a href="https://doka.guide/">Doka Guide</a>
 					</figcaption>
 				</figure>
 				<figure>
 					<img
-						src="pictures/gh-qr.png"
-						alt="Doka GitHub QR"
+						src="pictures/github-qr.svg"
+						alt="Doka Guide GitHub QR"
 						width="200px"
 						height="auto"
 					/>
 					<figcaption>
-						<a href="https://github.com/doka-guide">GitHub</a>
+						<a href="https://github.com/doka-guide/">Doka Guide GitHub</a>
+					</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="pictures/blog-qr.svg"
+						alt="Personal blog QR"
+						width="200px"
+						height="auto"
+					/>
+					<figcaption>
+						<a href="https://a11y-blog.dev/ru/"
+							>Blog on accessible development</a
+						>
 					</figcaption>
 				</figure>
 			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Interesting materials</h2>
+			<ul>
+				<li>
+					<a
+						href="https://www.nngroup.com/articles/legibility-readability-comprehension/"
+						>Legibility, readability, and comprehension</a
+					>
+				</li>
+				<li>
+					<a
+						href="https://fonts.google.com/knowledge/readability_and_accessibility/introducing_accessibility_in_typography/"
+						>Introducing accessibility in typography</a
+					>
+				</li>
+				<li>
+					<a
+						href="https://www.accessibilitychecking.com/blog/fonts-accessibility/"
+						>What is an accessible font?</a
+					>
+				</li>
+				<li>
+					<a href="https://www.understandingaccessibility.com/typefaces/"
+						>Typefaces and written content</a
+					>
+				</li>
+				<li>
+					<a
+						href="https://visionaustralia.org/business-consulting/digital-access/3-typography-mistakes-that-hurt-accessibility/"
+						>3 typography mistakes that hurt accessibility</a
+					>
+				</li>
+				<li>
+					<a href="https://elisehe.in/2021/03/13/fluid-type/"
+						>Why should type be fluid, anyway?</a
+					>
+				</li>
+				<li>
+					<a href="https://www.handtalk.me/en/blog/dyslexia-font/"
+						>Dyslexia font</a
+					>.
+				</li>
+			</ul>
 		</section>
 
 		<footer class="badge">

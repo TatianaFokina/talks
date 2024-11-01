@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Font weight</title>
+		<title>Latin letterforms</title>
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -17,7 +17,7 @@
 			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap"
 			rel="stylesheet"
 		/>
 		<style>
@@ -49,11 +49,7 @@
 			.container {
 				display: flex;
 				align-content: baseline;
-				gap: 40px;
-			}
-
-			.font {
-				width: 50%;
+				gap: 60px;
 			}
 
 			.font__name {
@@ -62,18 +58,18 @@
 			}
 
 			.font__example {
-				font-size: 18px;
-				font-style: normal;
+				font-size: 20px;
 				font-weight: 400;
+				font-style: normal;
 				color: #e8d0de;
 			}
 
 			.font__example--first {
-				font-family: "Archivo Black", sans-serif;
+				font-family: "Old Standard TT", serif;
 			}
 
 			.font__example--second {
-				font-family: "Work Sans", sans-serif;
+				font-family: "Verdana", sans-serif;
 			}
 
 			.font__characteristics {
@@ -87,25 +83,25 @@
 	<body>
 		<div class="container">
 			<div class="font">
-				<h2 class="font__name">Archivo Black</h2>
+				<h2 class="font__name">Old Standard TT</h2>
 				<div class="font__characteristics">
-					<p>Bold typeface ☹️</p>
+					<p>Less distinguishable letters.</p>
 				</div>
 				<p class="font__example font__example--first">
-					Given the notion of a lexeme, it is possible to distinguish two kinds
-					of morphological rules. Some morphological rules relate to different
-					forms of the same lexeme, but other rules relate to different lexemes.
+					Contemporary illustration uses a wide range of styles and techniques,
+					including drawing, painting, printmaking, collage, montage, digital
+					design, multimedia, 3D modelling.
 				</p>
 			</div>
 			<div class="font">
-				<h2 class="font__name">Work Sans</h2>
+				<h2 class="font__name">Verdana</h2>
 				<div class="font__characteristics">
-					<p>Regular typeface 🙂</p>
+					<p>More distinguishable letters.</p>
 				</div>
 				<p class="font__example font__example--second">
-					Given the notion of a lexeme, it is possible to distinguish two kinds
-					of morphological rules. Some morphological rules relate to different
-					forms of the same lexeme, but other rules relate to different lexemes.
+					Contemporary illustration uses a wide range of styles and techniques,
+					including drawing, painting, printmaking, collage, montage, digital
+					design, multimedia, 3D modelling.
 				</p>
 			</div>
 		</div>

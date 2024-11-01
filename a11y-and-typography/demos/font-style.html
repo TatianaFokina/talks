@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Display and monospaced typefaces</title>
+		<title>Typefaces</title>
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -17,7 +17,7 @@
 			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Kablammo&family=IBM+Plex+Mono&display=swap"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Kablammo&display=swap"
 			rel="stylesheet"
 		/>
 		<style>
@@ -49,7 +49,7 @@
 			.container {
 				display: flex;
 				align-content: baseline;
-				gap: 60px;
+				gap: 50px;
 			}
 
 			.font__name {
@@ -60,17 +60,25 @@
 			.font__example {
 				font-size: 20px;
 				font-style: normal;
+				font-weight: 400;
 				color: #e8d0de;
 			}
 
 			.font__example--first {
+				font-family: "Merriweather", serif;
+			}
+
+			.font__example--second {
+				font-family: "Open Sans", sans-serif;
+			}
+
+			.font__example--third {
 				font-family: "IBM Plex Mono", monospace;
 				font-weight: 200;
 			}
 
-			.font__example--second {
+			.font__example--fourth {
 				font-family: "Kablammo", system-ui;
-				font-weight: 400;
 			}
 
 			.font__characteristics {
@@ -84,18 +92,32 @@
 	<body>
 		<div class="container">
 			<div class="font">
-				<h2 class="font__name">IBM Plex Mono</h2>
+				<h2 class="font__name">Serif</h2>
 				<div class="font__characteristics">
-					<p>Monospaced typeface.</p>
+					<p><code>font-family: "Merriweather"</code></p>
 				</div>
-				<p class="font__example font__example--first">Grammatical category.</p>
+				<p class="font__example font__example--first">Brabancons</p>
 			</div>
 			<div class="font">
-				<h2 class="font__name">Kablammo</h2>
+				<h2 class="font__name">Sans-serif</h2>
 				<div class="font__characteristics">
-					<p>Display typeface.</p>
+					<p><code>font-family: "Open Sans"</code></p>
 				</div>
-				<p class="font__example font__example--second">Grammatical category.</p>
+				<p class="font__example font__example--second">Brabancons</p>
+			</div>
+			<div class="font">
+				<h2 class="font__name">Monospaced</h2>
+				<div class="font__characteristics">
+					<p><code>font-family: "IBM Plex Mono"</code></p>
+				</div>
+				<p class="font__example font__example--third">Brabancons</p>
+			</div>
+			<div class="font">
+				<h2 class="font__name">Display</h2>
+				<div class="font__characteristics">
+					<p><code>font-family: "Kablammo"</code></p>
+				</div>
+				<p class="font__example font__example--fourth">Brabancons</p>
 			</div>
 		</div>
 	</body>

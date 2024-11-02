@@ -153,6 +153,7 @@ html {
 }
 
 .slide a:hover {
+	color: var(--background-color);
 	background-color: var(--interaction-color);
 }
 

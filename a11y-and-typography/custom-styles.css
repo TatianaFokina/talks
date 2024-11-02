@@ -141,7 +141,7 @@ html {
 	width: 100%;
 	border: 0;
 	border-radius: 8px;
-	background-color: transparent;
+	background-color: rgb(46 48 48);
 }
 
 .slide li:before {

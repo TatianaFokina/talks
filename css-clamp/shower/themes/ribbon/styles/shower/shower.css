@@ -1,4 +1,4 @@
-/* Container for all slides */
+/* Shower */
 
 @import 'shower-list.css' screen;
 @import 'shower-full.css' screen;
@@ -6,8 +6,7 @@
 @import 'shower-grid.css' screen;
 @import 'shower-print.css' print;
 
-.shower,
-.slides {
+.shower {
     --slide-gap: 100px;
     --slide-ratio: calc(16 / 9);
     --slide-width: 1024px;
@@ -21,12 +20,8 @@
     --color-red: #cc0000;
     --color-yellow: #fafaa2;
     --color-grey: #585a5e;
-    --color-fill: rgba(88, 90, 94, 0.1);
-    --color-line: rgba(88, 90, 94, 0.5);
-
-    --color-light: hsl(309.49 27.746% 91.487%);
-	--color-dark: hsl(225.44 91.387% 21.648%);
-	--color-accent: hsl(321.0 100% 58.04%);
+    --color-fill: rgb(88 90 94 / 10%);
+    --color-line: rgb(88 90 94 / 50%);
 
     --ribbon-size: 50px;
     --progress-size: 10px;

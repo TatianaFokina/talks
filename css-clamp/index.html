@@ -569,6 +569,10 @@
 		</section>
 
 		<section class="slide">
+			<img class="cover" src="pictures/without-round-func.png" alt="">
+		</section>
+
+		<section class="slide">
 			<h2>Просто округли</h2>
 			<pre>
 				<code>h1 {</code>
@@ -580,6 +584,23 @@
 
 		<section class="slide">
 			<img class="cover" src="pictures/round-func-result.png" alt="">
+		</section>
+
+		<section class="slide" id="dark-slide-6">
+			<iframe class="cover-demo" id="resizable-iframe-6" src="demos/blog-post-v3.html" frameborder="0" title="Пост в блоге с резиновым заголовком"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-6">Размер окна:</label>
+				<input type="range" id="iframe-resizer-6" min="360" max="1200" value="1200" step="10" oninput="document.getElementById('resizable-iframe-6').style.width = this.value + 'px';">
+			</div>
+			<style>
+				#dark-slide-6 {
+					background-color: var(--color-dark);
+				}
+
+				#dark-slide-6 label {
+					color: var(--color-light);
+				}
+			</style>
 		</section>
 
 		<section class="slide">

@@ -92,9 +92,9 @@
 
 .slide pre code:not(:only-child)::before {
 	content: none;
-    position: absolute;
-    margin-left: 0;
-    counter-increment: none;
+	position: absolute;
+	margin-left: 0;
+	counter-increment: none;
 }
 
 .slide table {

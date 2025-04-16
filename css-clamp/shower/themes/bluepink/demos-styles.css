@@ -8,10 +8,6 @@
 	background-color: var(--color-dark);
 }
 
-/* .demo-container {
-	width: 80%;
-} */
-
 .demo-content__columns {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

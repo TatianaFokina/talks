@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Пост с резиновым заголовком и round()</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../themes/bluepink/custom-styles.css">
+		<link rel="stylesheet" href="../themes/bluepink/demos-styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+		<style>
+			.post-title {
+				padding-top: 12px;
+				margin-top: 0;
+				margin-bottom: 8px;
+				font-family: "Gabriela", serif;
+				font-weight: 400;
+				font-style: normal;
+				font-size: clamp(3rem, 5vw + 1.5rem, 7rem);
+				font-size: clamp(3rem, round(down, 5vw + 1.5rem, 2px), 7rem);
+			}
+
+			.post-text {
+				padding-top: 2px;
+				margin-bottom: 8px;
+				font-size: 1.1rem;
+			}
+
+			@media (width >= 768px) {
+				.post-text {
+					font-size: 1.4rem;
+				}
+			}
+		</style>
+	</head>
+	<body class="demo">
+		<div class="demo-container">
+			<main class="demo-content">
+				<div class="post">
+					<h1 class="post-title">Грегор Замза</h1>
+					<div class="demo-content__columns">
+						<div class="demo-content__column">
+							<p class="post-text">
+								Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+							</p>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

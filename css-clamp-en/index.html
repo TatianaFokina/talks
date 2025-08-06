@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fluid typography: The clamp() magic</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+		<link rel="stylesheet" href="shower/themes/bluepink/custom-styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+		<style>
+			.shower {
+				--slide-ratio: calc(16 / 9);
+			}
+		</style>
+	</head>
+	<body class="shower list">
+		<header class="caption">
+			<h1>Fluid typography: The <code>clamp()</code> magic</h1>
+			<p>Tatiana Fokina, Tbilisi JS Meetup #7</p>
+		</header>
+
+		<section class="slide slide--title">
+			<h2>Fluid typography: The <code>clamp()</code> magic</h2>
+			<p>Tbilisi JS Meetup #7, 16/08/2025 📍</p>
+			<figure>
+				<img
+					class="cover"
+					src="pictures/cover.png"
+					alt=""
+				>
+			</figure>
+		</section>
+
+		<section class="slide">
+			<h2>Who am I?</h2>
+			<div class="columns two">
+				<ul>
+					<li>Editor and contributer at <a href="https://doka.guide/">Doka Guide</a></li>
+					<li>Host the <a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a> podcast</li>
+					<li>Certified professional in accessibility core competencies (CPACC)</li>
+					<li>Trusted Tester for Web</li>
+					<li>Google’s Women Techmakers Ambassador.</li>
+				</ul>
+				<img class="content-image" src="pictures/speaker.jpg" alt="">
+			</div>
+		</section>
+
+		<section class="slide chapter">
+			<h2>Part 1. Let’s find some problems</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Expectation</h2>
+			<img class="cover" src="pictures/initial-layout.png" alt="">
+		</section>
+
+		<section class="slide" id="dark-slide">
+			<iframe class="cover-demo" id="resizable-iframe-1" src="demos/blog-post-v1.html" frameborder="0" title="The original blog post"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-1">Window size:</label>
+				<input type="range" id="iframe-resizer-1" min="460" max="1200" value="1200" step="5" oninput="document.getElementById('resizable-iframe-1').style.width = this.value + 'px';">
+			</div>
+			<style>
+				#dark-slide {
+					background-color: var(--color-dark);
+				}
+
+				#dark-slide label {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<h2>Reality</h2>
+			<img class="cover" src="pictures/real-layout.png" alt="">
+		</section>
+
+		<section class="slide">
+			<h2>Our goal</h2>
+			<p>
+				Change the <mark>size of a heading</mark> so that it adapts smoothly and consistently across all breakpoints.
+			</p>
+		</section>
+
+		<section class="slide chapter">
+			<h2>Part 2. In the search for the right approach</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Current styles</h2>
+			<pre>
+				<code>h1 {</code>
+				<code>  font-size: 3rem;</code>
+				<code>}</code>
+				<code>@media (width >= 576px) {</code>
+				<code>  h1 {</code>
+				<code>    font-size: 4rem;</code>
+				<code>  }</code>
+				<code>}</code>
+				<code>@media (width >= 768px) {</code>
+				<code>  h1 {</code>
+				<code>    font-size: 7rem;</code>
+				<code>  }</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<b>Approach #1</b>: Add extra breakpoints and suitable values for <code>font-size</code> 🙂
+			</p>
+		</section>
+
+		<section class="slide" id="dark-slide-2">
+			<iframe class="cover-demo" id="resizable-iframe-2" src="demos/blog-post-v2.html" frameborder="0" title="The first attempt to fix the heading"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-2">Window size:</label>
+				<input type="range" id="iframe-resizer-2" min="460" max="1200" value="1200" step="5" oninput="document.getElementById('resizable-iframe-2').style.width = this.value + 'px';">
+			</div>
+			<style>
+				#dark-slide-2 {
+					background-color: var(--color-dark);
+				}
+
+				#dark-slide-2 label {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<h2>New styles</h2>
+			<div class="columns three">
+				<pre>
+					<code>h1 {</code>
+					<code>  font-size: 3rem;</code>
+					<code>}</code>
+					<code>@media (width >= 460px) {</code>
+					<code>  h1 {</code>
+					<code>    font-size: 3.2rem;</code>
+					<code>  }</code>
+					<code>}</code>
+				</pre>
+				<pre>
+					<code>@media (width >= 576px) {</code>
+					<code>  h1 {</code>
+					<code>    font-size: 4rem;</code>
+					<code>  }</code>
+					<code>}</code>
+					<code>@media (width >= 768px) {</code>
+					<code>  h1 {</code>
+					<code>    font-size: 6rem;</code>
+					<code>  }</code>
+					<code>}</code>
+				</pre>
+				<pre>
+					<code>@media (width >= 700px) {</code>
+					<code>  h1 {</code>
+					<code>    font-size: 5rem;</code>
+					<code>  }</code>
+					<code>}</code>
+					<code>@media (width >= 992px) {</code>
+					<code>  h1 {</code>
+					<code>    font-size: 7rem;</code>
+					<code>  }</code>
+					<code>}</code>
+				</pre>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Number of breakpoints</h2>
+			<div class="columns two">
+				<div>
+					<h3>Then 🙂</h3>
+					<ul>
+						<li>≥ 576px</li>
+						<li>≥ 768px</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Now 🫠</h3>
+					<ul>
+						<li>≥ 460px</li>
+						<li>≥ 576px</li>
+						<li>≥ 700px</li>
+						<li>≥ 768px</li>
+						<li>≥ 992px</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/too-much-breakpoints.png" alt="">
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<b>Approach #2</b>: Change the heading size not in a responsive way but in a fluid one.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2 id="cover">Responsive font</h2>
+			<img class="cover" src="pictures/responsive-sizing.png" alt="">
+			<style>
+				h2#cover {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<h2 id="cover">Fluid font</h2>
+			<img class="cover" src="pictures/fluid-sizing.png" alt="">
+			<style>
+				h2#cover {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<h2>How to make the font fluid?</h2>
+			<ul>
+				<li class="next">JavaScript 🦖</li>
+				<li class="next">Preprocessors and mixins</li>
+				<li class="next"><code>calc()</code> and the <code>vw</code>/<code>vh</code> units</li>
+				<li class="next"><code>clamp()</code>.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/clamp-magic.png" alt="">
+		</section>
+
+		<section class="slide">
+			<h2>The <code>clamp()</code> definition</h2>
+			<p>
+				The CSS function for setting up the range of values for some CSS properties.
+			</p>
+		</section>
+
+		<section class="slide">
+			<p>
+				<img class="cover" src="pictures/clamp-support.png" alt="Global browser support is about 96.33%.">
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2><code>clamp()</code> anatomy</h2>
+			<p>
+				Available values are:
+			</p>
+			<ul>
+				<li>Minimum (minValue)</li>
+				<li>Preferred (prefValue)</li>
+				<li>Maximum (maxValue).</li>
+			</ul>
+			<pre>
+				<code>clamp(minValue, prefValue, maxValue);</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/clamp-min-max.png" alt="Минимальное максимальное">
+		</section>
+
+		<section class="slide shout">
+			<p>
+				A <mark>preferred value</mark> enables smooth text size adjustments.
+			</p>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/pref-value-1.png" alt="схема предпочтительного без калькуляций">
+		</section>
+
+		<section class="slide">
+			<iframe id="resizable-iframe-3" src="demos/clamp-1.html" frameborder="0" height="80%" title="The clamp function doesn’t work"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-3">Window size:</label>
+				<input type="range" id="iframe-resizer-3" min="460" max="840" value="840" step="5" oninput="document.getElementById('resizable-iframe-3').style.width = this.value + 'px';">
+			</div>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/confident-sponge.png" alt="">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/pref-value-2.png" alt="схема с калькуляциями">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/black-hole.png" alt="чёрная дыра">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/pref-value-anatomy.png" alt="предпочтительный размер">
+		</section>
+
+		<section class="slide">
+			<h2>Preferred width (vw)</h2>
+			<math id="math-1" xmlns="http://www.w3.org/1998/Math/MathML">
+				<mi>v</mi>
+				<mo>=</mo>
+				<mfrac>
+					<mrow>
+					<mn>100</mn>
+					<mo>&#x22C5;</mo>
+					<mo stretchy="false">(</mo>
+					<msub>
+						<mi>y</mi>
+						<mn>2</mn>
+					</msub>
+					<mo>&#x2212;</mo>
+					<msub>
+						<mi>y</mi>
+						<mn>1</mn>
+					</msub>
+					<mo stretchy="false">)</mo>
+					</mrow>
+					<mrow>
+					<msub>
+						<mi>x</mi>
+						<mn>2</mn>
+					</msub>
+					<mo>&#x2212;</mo>
+					<msub>
+						<mi>x</mi>
+						<mn>1</mn>
+					</msub>
+					</mrow>
+				</mfrac>
+				</math>
+				<ul>
+					<li>y1 — the min font size</li>
+					<li>y2 — the max font size</li>
+					<li>x1 — the min breakpoint (here the min font size ends)</li>
+					<li>x2 — the max breakpoint (here the max font size begins).</li>
+				</ul>
+				<style>
+					#math-1 {
+						margin: 60px auto 40px;
+					}
+				</style>
+		</section>
+
+		<section class="slide">
+			<h2>Relative size (rem)</h2>
+			<math id="math-2" xmlns="http://www.w3.org/1998/Math/MathML">
+				<mi>r</mi>
+				<mo>=</mo>
+				<mfrac>
+					<mrow>
+						<mo stretchy="false">(</mo>
+						<msub>
+							<mi>x</mi>
+							<mn>1</mn>
+						</msub>
+						<mo>&#x22C5;</mo>
+						<msub>
+							<mi>y</mi>
+							<mn>2</mn>
+						</msub>
+						<mo stretchy="false">)</mo>
+						<mo>&#x2212;</mo>
+						<mo stretchy="false">(</mo>
+						<msub>
+							<mi>x</mi>
+							<mn>2</mn>
+						</msub>
+						<mo>&#x22C5;</mo>
+						<msub>
+							<mi>y</mi>
+							<mn>1</mn>
+						</msub>
+						<mo stretchy="false">)</mo>
+					</mrow>
+					<mrow>
+						<msub>
+							<mi>x</mi>
+							<mn>1</mn>
+						</msub>
+						<mo>&#x2212;</mo>
+						<msub>
+							<mi>x</mi>
+							<mn>2</mn>
+						</msub>
+					</mrow>
+				</mfrac>
+			</math>
+			<ul>
+				<li>y1 — min font size</li>
+				<li>y2 — max font size</li>
+				<li>x1 — the min breakpoint (here the min font size ends)</li>
+				<li>x2 — the max breakpoint (here the max font size begins).</li>
+			</ul>
+			<style>
+				#math-2 {
+					margin: 60px auto 40px;
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/pref-value-disaster.png" alt="мем с кнопками">
+		</section>
+
+		<section class="slide">
+			<h2>Approach with the formula</h2>
+			<ul>
+				<li class="next">More smoothly scaling</li>
+				<li class="next">Text isn’t <i>too</i> small on mobile devices</li>
+				<li class="next">Text doesn’t become larger too abruptly as the screen width increases.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/pref-val-diff.png" alt="объяснение отличий">
+		</section>
+
+		<section class="slide chapter">
+			<h2>Part NaN: Don’t touch it when it works</h2>
+		</section>
+
+		<section class="slide">
+			<h2>Successful fluid approach</h2>
+			<ul>
+				<li class="next"><b>Don’t set</b> min and max font sizes in pixels</li>
+				<li class="next">Keep an eye <b>on the ratio</b> between the largest and smallest font sizes.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Why wouldn’t we use pixels?</h2>
+			<p>
+				If you set the font size in pixels, the browser’s default text size (<mark>16&nbsp;pixels</mark>) will be overridden, and text <b>won’t scale</b> when user settings change.
+			</p>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/chrome-appearance-settings.png" alt="">
+		</section>
+
+		<section class="slide">
+			<h2>Example with the <code>html</code> element</h2>
+			<pre>
+				<code>html {</code>
+				<code>  font-size: 15px;</code>
+				<code>}</code>
+				<code>h1 {</code>
+				<code>  font-size: 1rem;</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/google-layout.png" alt="как устроено промежуточное значение">
+		</section>
+
+		<section class="slide">
+			<h2>Ratio between larger and smaller values</h2>
+			<p>
+				<b>The max font size</b> must be <mark>less than or equal to 2.5 times</mark> the min font size 🤯
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Why this ratio?</h2>
+			<p>
+				Text with incorrect sizing <b>doesn’t scale well</b> because it <b>won’t achieve a double increase</b> due to overlapping zoom and scaling functions.
+			</p>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/zoom.png" alt="">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/calc-good-result.png" alt="Good result of calculations">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/calc-problematic-result.png" alt="Problematic result of calculations">
+		</section>
+
+		<section class="slide">
+			<h2>Who resizes and rescales the UI?</h2>
+			<ul>
+				<li class="next">People with different eye conditions</li>
+				<li class="next">Those who want to make the font and elements larger for other reasons.</li>
+			</ul>
+		</section>
+
+		<section class="slide chapter">
+			<h2>Part 4: Polishing the demo</h2>
+		</section>
+
+		<section class="slide" id="dark-slide-4">
+			<iframe class="cover-demo" id="resizable-iframe-4" src="demos/blog-post-v2.html" frameborder="0" title="The first attempt to fix the heading size"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-4">Window size:</label>
+				<input type="range" id="iframe-resizer-4" min="460" max="1200" value="1200" step="5" oninput="document.getElementById('resizable-iframe-4').style.width = this.value + 'px';">
+			</div>
+			<style>
+				#dark-slide-4 {
+					background-color: var(--color-dark);
+				}
+
+				#dark-slide-4 label {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<h2>Rewrite the code</h2>
+			<div class="columns two">
+				<div>
+					<h3>Then</h3>
+					<pre>
+						<code>h1 {</code>
+						<code>  font-size: 3rem;</code>
+						<code>}</code>
+						<code>@media (width >= 460px) {</code>
+						<code>  h1 {</code>
+						<code>    font-size: 3.2rem;</code>
+						<code>  }</code>
+						<code>}</code>
+						<code>…</code>
+					</pre>
+				</div>
+				<div>
+					<h3>Now</h3>
+					<pre>
+						<code>h1 {</code>
+						<code>  font-size: clamp(3rem, 5vw + 1.5rem, 7rem);</code>
+						<code>}</code>
+					</pre>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide" id="dark-slide-5">
+			<iframe class="cover-demo" id="resizable-iframe-5" src="demos/blog-post-v3.html" frameborder="0" title="Blog post with a fluid heading"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-5">Window size:</label>
+				<input type="range" id="iframe-resizer-5" min="360" max="1200" value="1200" step="10" oninput="document.getElementById('resizable-iframe-5').style.width = this.value + 'px';">
+			</div>
+			<style>
+				#dark-slide-5 {
+					background-color: var(--color-dark);
+				}
+
+				#dark-slide-5 label {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/round-func.png" alt="">
+		</section>
+
+		<section class="slide shout">
+			<p>
+				<b>Final touches</b>: Get rid of fractional units for easier comprehension ✨
+			</p>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/without-round-func.png" alt="">
+		</section>
+
+		<section class="slide">
+			<h2>Rounding off values</h2>
+			<pre>
+				<code>h1 {</code>
+				<code>  font-size: clamp(3rem, 5vw + 1.5rem, 7rem);</code>
+				<code>  font-size: clamp(3rem, <mark>round(down, 5vw + 1.5rem, 2px)</mark>, 7rem);</code>
+				<code>}</code>
+			</pre>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/round-func-result.png" alt="">
+		</section>
+
+		<section class="slide" id="dark-slide-6">
+			<iframe class="cover-demo" id="resizable-iframe-6" src="demos/blog-post-v3.html" frameborder="0" title="The fluid heading with the rounded value"></iframe>
+			<div class="iframe-control">
+				<label for="iframe-resizer-6">Window size:</label>
+				<input type="range" id="iframe-resizer-6" min="360" max="1200" value="1200" step="10" oninput="document.getElementById('resizable-iframe-6').style.width = this.value + 'px';">
+			</div>
+			<style>
+				#dark-slide-6 {
+					background-color: var(--color-dark);
+				}
+
+				#dark-slide-6 label {
+					color: var(--color-light);
+				}
+			</style>
+		</section>
+
+		<section class="slide">
+			<h2>Current issues with <code>round()</code></h2>
+			<ul>
+				<li class="next">A new feature with some rough edges in implementation</li>
+				<li class="next">May impact performance (so if your laptop freezes, blame everything on CSS).</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/round-func-support.png" alt="">
+		</section>
+
+		<section class="slide chapter">
+			<h2>Part 5. Wrapping up</h2>
+		</section>
+
+		<section class="slide shout">
+			<p>
+				Fluid typography <mark>doesn’t replace</mark> responsive typography. The choice depends on the specific case.
+			</p>
+		</section>
+
+		<section class="slide">
+			<h2>Fluid typography</h2>
+			<div class="columns two">
+				<div>
+					<h3>Pros ➕</h3>
+					<ul>
+						<li>Doesn’t require supporting a large set of breakpoints</li>
+						<li>Achieved with a single line of CSS</li>
+						<li>You don’t need to create separate design layouts for every screen size.</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Cons ➖</h3>
+					<ul>
+						<li>The calculation logic for the preferred size is complex</li>
+						<li>Can break browser page zoom functionality</li>
+						<li>Text is unpredictable, so the final layout may differ from the designer’s vision.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="slide">
+			<h2>Fluid typography use cases</h2>
+			<p>
+				<b>Any heading</b>, especially large ones, and <b>texts</b> with noticeable size differences.
+			</p>
+			<img src="pictures/big-text.png" width="100%" alt="">
+		</section>
+
+		<section class="slide">
+			<img class="cover" src="pictures/the-end.png" alt="">
+		</section>
+
+		<section class="slide">
+			<h2>Calculators</h2>
+			<ul>
+				<li>
+					<a href="https://fluid.style/">Accessible fluid CSS type generator</a>
+				</li>
+				<li>
+					<a href="https://utopia.fyi/type/calculator/">Utopia fluid responsive design tool</a>
+				</li>
+				<li>
+					<a href="https://modern-fluid-typography.vercel.app">Modern fluid typography editor</a>
+				</li>
+				<li>
+					<a href="https://royalfig.github.io/fluid-typography-calculator/">Fluid Typography Calculator</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Further reading</h2>
+			<ul>
+				<li>
+					<a href="https://doka.guide/css/clamp/">Doka Guide about <code>clamp()</code></a>
+				</li>
+				<li>
+					<a href="https://elisehe.in/2021/03/13/fluid-type">Why should type be fluid, anyway?</a>
+				</li>
+				<li>
+					<a href="https://betterwebtype.com/the-state-of-fluid-web-typography/">The state of fluid web typography</a>
+				</li>
+				<li>
+					<a href="https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/">Modern fluid typography using CSS clamp</a>
+				</li>
+				<li>
+					<a href="https://www.smashingmagazine.com/2023/11/addressing-accessibility-concerns-fluid-type/">Addressing accessibility concerns with using fluid type</a>
+				</li>
+				<li>
+					<a href="https://zellwk.com/blog/changing-modular-scale/">Changing modular scale ratio at different breakpoints</a>
+				</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Personal links</h2>
+			<div
+				class="columns three"
+				id="pictures"
+			>
+				<figure>
+					<img
+						src="pictures/qr-doka.png"
+						alt="Doka Guide QR code"
+						width="200px"
+						height="auto"
+					>
+					<figcaption>
+						<a href="https://doka.guide/">Doka Guide 🐶</a>
+					</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="pictures/qr-blog.png"
+						alt="Blog QR code"
+						width="200px"
+						height="auto"
+					>
+					<figcaption>
+						<a href="https://a11y-blog.dev/ru/">
+							Personal blog on a11y
+						</a>
+					</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="pictures/qr-pineapple.png"
+						alt="Podcast website QR code"
+						width="200px"
+						height="auto"
+					>
+					<figcaption>
+						<a href="https://inclusivepineapple.github.io">
+							Inclusive Pineapple
+						</a>
+					</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<footer class="badge">
+			<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+		</footer>
+
+		<div class="progress"></div>
+
+		<script src="shower/shower.js"></script>
+	</body>
+</html>

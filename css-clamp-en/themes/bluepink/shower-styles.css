@@ -1,0 +1,38 @@
+@layer base {
+	.shower,
+	.shower.list,
+	.shower.full {
+		background-color: var(--color-dark);
+		color: var(--color-light);
+	}
+}
+
+.progress:before {
+	background-color: var(--color-medium);
+}
+
+/* Styles for one slide */
+
+.shower.list .slide {
+	border-radius: 10px;
+	box-shadow: none;
+}
+
+.shower.list .slide:hover {
+	box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.1), 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.shower.list .slide.active {
+	box-shadow: 0 0 0 10px var(--color-accent);
+}
+
+.vh {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

@@ -37,9 +37,9 @@
 			<h2>Who am I?</h2>
 			<div class="columns two">
 				<ul>
-					<li>Editor and contributer at <a href="https://doka.guide/">Doka Guide</a></li>
-					<li>Host the <a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a> podcast</li>
-					<li>Certified professional in accessibility core competencies (CPACC)</li>
+					<li>Editor and contributor at <a href="https://doka.guide/">Doka Guide</a></li>
+					<li>Host of the <a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a> podcast</li>
+					<li>Certified Professional in Accessibility Core Competencies</li>
 					<li>Trusted Tester for Web</li>
 					<li>Google’s Women Techmakers Ambassador.</li>
 				</ul>
@@ -52,7 +52,7 @@
 		</section>
 
 		<section class="slide">
-			<h2>Expectation</h2>
+			<h2>Expectations</h2>
 			<img class="cover" src="pictures/initial-layout.png" alt="">
 		</section>
 
@@ -81,7 +81,7 @@
 		<section class="slide">
 			<h2>Our goal</h2>
 			<p>
-				Change the <mark>size of a heading</mark> so that it adapts smoothly and consistently across all breakpoints.
+				Change the <mark>size of the heading</mark> so it adapts smoothly and consistently across all breakpoints.
 			</p>
 		</section>
 
@@ -205,7 +205,7 @@
 		</section>
 
 		<section class="slide">
-			<h2 id="cover">Responsive font</h2>
+			<h2 id="cover">Responsive font size</h2>
 			<img class="cover" src="pictures/responsive-sizing.png" alt="">
 			<style>
 				h2#cover {
@@ -215,7 +215,7 @@
 		</section>
 
 		<section class="slide">
-			<h2 id="cover">Fluid font</h2>
+			<h2 id="cover">Fluid font size</h2>
 			<img class="cover" src="pictures/fluid-sizing.png" alt="">
 			<style>
 				h2#cover {
@@ -396,8 +396,8 @@
 				</mfrac>
 			</math>
 			<ul>
-				<li>y1 — min font size</li>
-				<li>y2 — max font size</li>
+				<li>y1 — the min font size</li>
+				<li>y2 — the max font size</li>
 				<li>x1 — the min breakpoint (here the min font size ends)</li>
 				<li>x2 — the max breakpoint (here the max font size begins).</li>
 			</ul>
@@ -415,7 +415,7 @@
 		<section class="slide">
 			<h2>Approach with the formula</h2>
 			<ul>
-				<li class="next">More smoothly scaling</li>
+				<li class="next">More smoother scaling</li>
 				<li class="next">Text isn’t <i>too</i> small on mobile devices</li>
 				<li class="next">Text doesn’t become larger too abruptly as the screen width increases.</li>
 			</ul>
@@ -430,10 +430,10 @@
 		</section>
 
 		<section class="slide">
-			<h2>Successful fluid approach</h2>
+			<h2>Success in fluid approach</h2>
 			<ul>
-				<li class="next"><b>Don’t set</b> min and max font sizes in pixels</li>
-				<li class="next">Keep an eye <b>on the ratio</b> between the largest and smallest font sizes.</li>
+				<li class="next"><b>Don’t set</b> the min and the max font sizes in pixels</li>
+				<li class="next">Keep an eye <b>on the ratio</b> between the largest and the smallest font sizes.</li>
 			</ul>
 		</section>
 
@@ -472,9 +472,9 @@
 		</section>
 
 		<section class="slide">
-			<h2>Why this ratio?</h2>
+			<h2>Why <i>this</i> ratio?</h2>
 			<p>
-				Text with incorrect sizing <b>doesn’t scale well</b> because it <b>won’t achieve a double increase</b> due to overlapping zoom and scaling functions.
+				Text with inappropriate sizing <b>doesn’t scale well</b> because it <b>won’t achieve a proper increase</b> due to overlap between zoom and scaling functions.
 			</p>
 		</section>
 
@@ -494,7 +494,7 @@
 			<h2>Who resizes and rescales the UI?</h2>
 			<ul>
 				<li class="next">People with different eye conditions</li>
-				<li class="next">Those who want to make the font and elements larger for other reasons.</li>
+				<li class="next">Those who want to make font and elements larger for any reason.</li>
 			</ul>
 		</section>
 
@@ -570,7 +570,7 @@
 
 		<section class="slide shout">
 			<p>
-				<b>Final touches</b>: Get rid of fractional units for easier comprehension ✨
+				<b>Final touches</b>: Round the numbers for better code readability ✨
 			</p>
 		</section>
 
@@ -579,7 +579,7 @@
 		</section>
 
 		<section class="slide">
-			<h2>Rounding off values</h2>
+			<h2>Rounding the numbers</h2>
 			<pre>
 				<code>h1 {</code>
 				<code>  font-size: clamp(3rem, 5vw + 1.5rem, 7rem);</code>
@@ -613,7 +613,7 @@
 			<h2>Current issues with <code>round()</code></h2>
 			<ul>
 				<li class="next">A new feature with some rough edges in implementation</li>
-				<li class="next">May impact performance (so if your laptop freezes, blame everything on CSS).</li>
+				<li class="next">Slows down the performance (so if your laptop freezes, blame everything on CSS).</li>
 			</ul>
 		</section>
 
@@ -645,9 +645,9 @@
 				<div>
 					<h3>Cons ➖</h3>
 					<ul>
-						<li>The calculation logic for the preferred size is complex</li>
+						<li>The calculation logic for the preferred size is difficult</li>
 						<li>Can break browser page zoom functionality</li>
-						<li>Text is unpredictable, so the final layout may differ from the designer’s vision.</li>
+						<li>Text is unpredictable, so the final layout may differ from the expected results.</li>
 					</ul>
 				</div>
 			</div>
@@ -661,7 +661,7 @@
 			<img src="pictures/big-text.png" width="100%" alt="">
 		</section>
 
-		<section class="slide">
+		<section class="slide">`
 			<img class="cover" src="pictures/the-end.png" alt="">
 		</section>
 
@@ -669,16 +669,16 @@
 			<h2>Calculators</h2>
 			<ul>
 				<li>
-					<a href="https://fluid.style/">Accessible fluid CSS type generator</a>
+					<a href="https://fluid.style/">Accessible fluid CSS type generator</a> (fluid.style)
 				</li>
 				<li>
-					<a href="https://utopia.fyi/type/calculator/">Utopia fluid responsive design tool</a>
+					<a href="https://utopia.fyi/type/calculator/">Utopia fluid responsive design tool</a> (utopia.fyi)
 				</li>
 				<li>
-					<a href="https://modern-fluid-typography.vercel.app">Modern fluid typography editor</a>
+					<a href="https://modern-fluid-typography.vercel.app">Modern fluid typography editor</a> (modern-fluid-typography.vercel.app)
 				</li>
 				<li>
-					<a href="https://royalfig.github.io/fluid-typography-calculator/">Fluid Typography Calculator</a>
+					<a href="https://royalfig.github.io/fluid-typography-calculator/">Fluid typography calculator</a> (royalfig.github.io)
 				</li>
 			</ul>
 		</section>
@@ -733,7 +733,7 @@
 					>
 					<figcaption>
 						<a href="https://a11y-blog.dev/ru/">
-							Personal blog on a11y
+							Personal blog about a11y
 						</a>
 					</figcaption>
 				</figure>

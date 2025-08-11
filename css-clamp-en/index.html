@@ -39,9 +39,7 @@
 				<ul>
 					<li>Editor and contributor at <a href="https://doka.guide/">Doka Guide</a></li>
 					<li>Host of the <a href="https://inclusivepineapple.github.io">Inclusive Pineapple</a> podcast</li>
-					<li>Certified Professional in Accessibility Core Competencies</li>
-					<li>Trusted Tester for Web</li>
-					<li>Google’s Women Techmakers Ambassador.</li>
+					<li>Certified Professional in Accessibility Core Competencies.</li>
 				</ul>
 				<img class="content-image" src="pictures/speaker.jpg" alt="">
 			</div>
@@ -253,17 +251,19 @@
 
 		<section class="slide">
 			<h2><code>clamp()</code> anatomy</h2>
-			<p>
-				Available values are:
-			</p>
 			<ul>
-				<li>Minimum (minValue)</li>
-				<li>Preferred (prefValue)</li>
-				<li>Maximum (maxValue).</li>
+				<li>Minimum (<code>minValue</code>)</li>
+				<li>Preferred (<code>prefValue</code>)</li>
+				<li>Maximum (<code>maxValue</code>).</li>
 			</ul>
 			<pre>
-				<code>clamp(minValue, prefValue, maxValue);</code>
+				<code id="code">clamp(minValue, prefValue, maxValue);</code>
 			</pre>
+			<style>
+				#code {
+					font-size: var(--font-size-md);
+				}
+			</style>
 		</section>
 
 		<section class="slide">
@@ -338,15 +338,9 @@
 					</mrow>
 				</mfrac>
 				</math>
-				<ul>
-					<li>y1 — the min font size</li>
-					<li>y2 — the max font size</li>
-					<li>x1 — the min breakpoint (here the min font size ends)</li>
-					<li>x2 — the max breakpoint (here the max font size begins).</li>
-				</ul>
 				<style>
 					#math-1 {
-						margin: 60px auto 40px;
+						margin: 106px auto 40px;
 					}
 				</style>
 		</section>
@@ -395,17 +389,21 @@
 					</mrow>
 				</mfrac>
 			</math>
-			<ul>
-				<li>y1 — the min font size</li>
-				<li>y2 — the max font size</li>
-				<li>x1 — the min breakpoint (here the min font size ends)</li>
-				<li>x2 — the max breakpoint (here the max font size begins).</li>
-			</ul>
 			<style>
 				#math-2 {
-					margin: 60px auto 40px;
+					margin: 106px auto 40px;
 				}
 			</style>
+		</section>
+
+		<section class="slide">
+			<h2>Unknowns</h2>
+			<ul>
+				<li><b>y1</b> = the min font size</li>
+				<li><b>y2</b> = the max font size</li>
+				<li><b>x1</b> = the min breakpoint (here the min font size ends)</li>
+				<li><b>x2</b> = the max breakpoint (here the max font size begins).</li>
+			</ul>
 		</section>
 
 		<section class="slide">
@@ -438,7 +436,7 @@
 		</section>
 
 		<section class="slide">
-			<h2>Why wouldn’t we use pixels?</h2>
+			<h2>Problems with pixels</h2>
 			<p>
 				If you set the font size in pixels, the browser’s default text size (<mark>16&nbsp;pixels</mark>) will be overridden, and text <b>won’t scale</b> when user settings change.
 			</p>
@@ -449,7 +447,7 @@
 		</section>
 
 		<section class="slide">
-			<h2>Example with the <code>html</code> element</h2>
+			<h2>Reset the root size</h2>
 			<pre>
 				<code>html {</code>
 				<code>  font-size: 15px;</code>
@@ -610,7 +608,7 @@
 		</section>
 
 		<section class="slide">
-			<h2>Current issues with <code>round()</code></h2>
+			<h2>Issues with <code>round()</code></h2>
 			<ul>
 				<li class="next">A new feature with some rough edges in implementation</li>
 				<li class="next">Slows down the performance (so if your laptop freezes, blame everything on CSS).</li>
@@ -632,25 +630,21 @@
 		</section>
 
 		<section class="slide">
-			<h2>Fluid typography</h2>
-			<div class="columns two">
-				<div>
-					<h3>Pros ➕</h3>
-					<ul>
-						<li>Doesn’t require supporting a large set of breakpoints</li>
-						<li>Achieved with a single line of CSS</li>
-						<li>You don’t need to create separate design layouts for every screen size.</li>
-					</ul>
-				</div>
-				<div>
-					<h3>Cons ➖</h3>
-					<ul>
-						<li>The calculation logic for the preferred size is difficult</li>
-						<li>Can break browser page zoom functionality</li>
-						<li>Text is unpredictable, so the final layout may differ from the expected results.</li>
-					</ul>
-				</div>
-			</div>
+			<h2>Fluid typography pros ➕</h2>
+			<ul>
+				<li>Doesn’t require supporting a large set of breakpoints</li>
+				<li>Achieved with a single line of CSS</li>
+				<li>You don’t need to create separate design layouts for every screen size.</li>
+			</ul>
+		</section>
+
+		<section class="slide">
+			<h2>Fluid typography cons ➖</h2>
+			<ul>
+				<li>The calculation logic for the preferred size is difficult</li>
+				<li>Can break browser page zoom functionality</li>
+				<li>Text is unpredictable, so the final layout may differ from the expected results.</li>
+			</ul>
 		</section>
 
 		<section class="slide">
@@ -693,16 +687,10 @@
 					<a href="https://elisehe.in/2021/03/13/fluid-type">Why should type be fluid, anyway?</a>
 				</li>
 				<li>
-					<a href="https://betterwebtype.com/the-state-of-fluid-web-typography/">The state of fluid web typography</a>
-				</li>
-				<li>
 					<a href="https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/">Modern fluid typography using CSS clamp</a>
 				</li>
 				<li>
 					<a href="https://www.smashingmagazine.com/2023/11/addressing-accessibility-concerns-fluid-type/">Addressing accessibility concerns with using fluid type</a>
-				</li>
-				<li>
-					<a href="https://zellwk.com/blog/changing-modular-scale/">Changing modular scale ratio at different breakpoints</a>
 				</li>
 			</ul>
 		</section>
@@ -721,7 +709,7 @@
 						height="auto"
 					>
 					<figcaption>
-						<a href="https://doka.guide/">Doka Guide 🐶</a>
+						<a href="https://doka.guide/">Doka Guide</a>
 					</figcaption>
 				</figure>
 				<figure>

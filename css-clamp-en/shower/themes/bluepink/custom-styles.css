@@ -16,4 +16,11 @@
 
 	--font-sans-serif: "Nunito", "Roboto", Arial, sans-serif;
 	--font-mono: "DM Mono", monospace;
+
+	--font-size-xs: 1.0625rem;
+	--font-size-sm: 1.625rem;
+	--font-size-md: 2.1875rem;
+	--font-size-lg: 2.875rem;
+	--font-size-xl: 4rem;
+	--font-size-xxl: 4.5rem;
 }

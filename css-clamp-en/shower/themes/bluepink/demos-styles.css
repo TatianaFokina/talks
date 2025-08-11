@@ -1,5 +1,6 @@
 .demo {
 	display: flex;
+	max-width: 85%;
 	margin: 1rem 2rem;
 	font-family: var(--font-sans-serif);
 	font-weight: inherit;
@@ -12,4 +13,27 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
+}
+
+.slide iframe {
+	display: block;
+	width: 100%;
+	border: 0;
+	border-radius: 8px;
+	background-color: var(--color-dark);
+	scrollbar-gutter: stable;
+}
+
+.slide iframe.cover-demo {
+	width: 1200px;
+	height: 80%;
+	border-top: 3px solid var(--color-accent);
+	border-bottom: 3px solid var(--color-accent);
+	border-right: 3px solid var(--color-accent);
+	margin-left: calc(-1 * var(--slide-side));
+	border-radius: 0;
+}
+
+.slide .iframe-control {
+	padding-top: 1em;
 }

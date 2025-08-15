@@ -2,6 +2,7 @@
 
 ## 2025
 
+- [The Doka Guide](doka-presentation/), Tbilisi JS Meetup #7.
 - [Fluid typography: The clamp() magic](css-clamp-en/), Tbilisi JS Meetup #7.
 - [Резиновая типографика: магия clamp()](css-clamp/), MinskCSS.
 
